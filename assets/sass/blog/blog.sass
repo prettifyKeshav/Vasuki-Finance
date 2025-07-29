@@ -1,0 +1,237 @@
+@import '../_var'
+
+.banner
+    padding-top: var(--headerheight)
+    .heading
+        padding: 50px 0 
+        text-align: center
+        h1
+            font-weight: 600
+            font-size: 48px
+            margin-bottom: 10px
+        p
+            font-weight: 400
+            font-size: 16px
+
+.blog-secA
+    padding: 0 0 50px 0  
+
+    .grid-box
+        display: grid
+        grid-template-columns: repeat(4,1fr)
+        grid-gap: 40px 20px
+        @include media(1024)
+            grid-template-columns: repeat(3,1fr)
+        @include media(768)
+            grid-template-columns: repeat(2,1fr)
+        @include media(540)
+            grid-template-columns: repeat(1,1fr)
+        .grid-box-item
+            background: #EEEEEE
+            &:hover
+                figure img
+                    scale: 1.1
+            figure
+                height: 210px
+                width: 100%
+                overflow: hidden
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    transition: 0.3s ease-in-out
+            figcaption
+                padding: 30px 20px
+                span
+                    font-weight: 500
+                    color: #666666
+                    font-size: 14px
+                h2
+                    font-weight: 500
+                    font-size: 18px
+                    color: black
+                    margin: 10px 0 30px 0
+                p
+                    font-size: 16px
+                    color: $primary
+                    font-weight: 500
+                
+// ========================================================= BLOG DETAILS ========================================================= //
+
+.blog-detail-banner
+    position: relative
+    color: white
+    overflow: hidden
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @include media(1024)
+        height: 80vh
+    @include media(991)
+        height: 50vh
+    @include media(540)
+        height: 60vh
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0) 50.48%, rgba(0, 0, 0, 0.98) 100%),linear-gradient(270deg, rgba(0, 0, 0, 0) 57.69%, rgba(0, 0, 0, 0.65) 100%),linear-gradient(180deg, rgba(0, 0, 0, 0) 55.49%, rgba(0, 0, 0, 0.95) 100%)
+        @include media(540)    
+            background: linear-gradient(360deg, rgba(0, 0, 0, 0) 50.48%, rgba(0, 0, 0, 0.98) 100%), linear-gradient(270deg, rgba(0, 0, 0, 0) 57.69%, rgba(0, 0, 0, 0.65) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 35.49%, rgba(0, 0, 0, 0.95) 100%)
+    .banner-wrapper 
+        width: 100%
+        .bg-image
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
+            height: 100%
+            width: 100%
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        .container
+            @include media(540)
+                padding: 0
+            .bg-wrapper
+                // max-width: 50%
+                position: absolute
+                z-index: 1
+                width: 100%
+                bottom: 20%
+                margin-left: 10px
+                @include media(991)
+                    bottom: 40%
+                @include media(540)
+                    bottom: 14%
+                    margin-left: 0
+                h1
+                    font-weight: 600
+                    font-size: 36px
+                    line-height: 1.1
+                    text-align: left
+                    margin-bottom: 18px
+                    max-width: 678px
+
+                    @include media(991)
+                        max-width: 70%
+                        line-height: 1.2
+                        font-size: 30px
+                    @include media(540)
+                        max-width: 100%
+                        font-size: 25px
+                        line-height: 1.1
+                        text-align: center
+                        padding: 0 20px
+                        margin-bottom: 8px
+
+                p
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 22px
+                    color: $white
+                    width: 450px
+                    margin-bottom: 20px
+                    @include media(991)
+                        max-width: 100%
+                        color: #ffffffe0
+                    @include media(540)
+                        max-width: 100%
+                        font-size: 13px
+                        line-height: 1.2
+                        text-align: center
+                        color: #ffffffdb
+
+.blog-details-secA
+    padding: 50px 0
+    .container
+        max-width: 880px
+    .content
+        p
+            font-weight: 400
+            font-size: 16px
+            text-align: justify
+            margin-bottom: 25px
+            color: $text
+        h2
+            font-weight: 600
+            font-size: 25px
+            color: black
+            margin: 40px 0 10px 0
+        h3
+            font-weight: 600
+            font-size: 18px
+            color: black
+            margin: 40px 0 10px 0
+        h4
+            font-weight: 600
+            font-size: 16px
+            color: black
+            margin: 40px 0 10px 0
+        h5
+            font-weight: 600
+            font-size: 14px
+            color: black
+            margin: 40px 0 10px 0
+        ul
+            margin-bottom: 20px
+            margin-left: 10px
+            li
+                position: relative
+                padding-left: 30px
+                margin-bottom: 10px
+                color: $text
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 50%
+                    width: 14px
+                    aspect-ratio: 1
+                    border-radius: 50%
+                    background: #5393C5
+                    transform: translateY(-50%)
+
+
+.blog-details-secB
+    padding: 0 0 50px 0
+    .upper-sec
+        padding: 0 !important
+    .swiper-wrapper
+        padding: 50px 0
+        .swiper-slide
+            a
+                background: #EEEEEE
+                &:hover
+                    figure img
+                        scale: 1.1
+                figure
+                    height: 210px
+                    width: 100%
+                    overflow: hidden
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        transition: 0.3s ease-in-out
+                figcaption
+                    padding: 30px 20px
+                    background: #EEEEEE
+                    span
+                        font-weight: 500
+                        color: #666666
+                        font-size: 14px
+                    h2
+                        font-weight: 500
+                        font-size: 18px
+                        color: black
+                        margin: 10px 0 30px 0
+                    p
+                        font-size: 16px
+                        color: $primary
+                        font-weight: 500
