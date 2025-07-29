@@ -451,20 +451,23 @@
 .home-secF
     position: relative
     color: white
-    height: 100vh
+    height: 85vh
     display: flex
     flex-direction: column
     justify-content: center
+    z-index: 1
+    background: $white
     .wrapper
         padding: 50px 0
         border-radius: 15px
-        background: pink
+        background: $white
         text-align: center
         position: absolute
-        top: -20%
+        top: -15%
         width: 100%
         max-width: 1280px
         margin: 0 auto
+        z-index: 1
         .heading
             padding: 20px 0
         .form
@@ -472,3 +475,16 @@
             margin: auto
             padding: 50px 0 0 0
             --item: 2
+            .bottom-btn
+                margin: auto
+            .dropdown-input
+                text-align: left
+                .list
+                    li
+                        color: $text
+                        transition: 0.5s ease
+                        &.focus
+                            color: white
+                        &:hover
+                            color: $white
+                            background: $primary

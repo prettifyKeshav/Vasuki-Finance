@@ -26,10 +26,10 @@
 }
 .form {
   --inputsize: 42px;
-  --labelbefore: var(--text);
-  --labelafter: var(--text);
-  --borderbefore: var(--litewhite);
-  --borderafter: var(--text);
+  --labelbefore: var(--black);
+  --labelafter: var(--black);
+  --borderbefore: var(--black);
+  --borderafter: var(--gradient-a);
   --labelfontbefore: 16px;
   --labelfontafter: 12px;
   --font: 500;
@@ -2444,6 +2444,12 @@ button {
 .heading p {
   font-weight: 400;
   font-size: 16px;
+}
+
+.sticky {
+  position: sticky;
+  top: 20px;
+  z-index: 1;
 }
 
 header {

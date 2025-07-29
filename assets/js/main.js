@@ -88,6 +88,16 @@ $(function () {
 
     //
 
+    const labelInput = $("input,textarea");
+    labelInput.on('change', function() {
+        if ($(this).val() !== "") {
+            $(this).addClass("valid");
+        } else {
+            $(this).removeClass("valid");
+        }
+    });
+
+
     $('input[type="file"].form-control').on('change', function () {
         var fileName = $(this).val().replace(/C:\\fakepath\\/i, '');
         if (fileName) {
