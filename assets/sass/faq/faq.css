@@ -1,0 +1,157 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.faq-secA {
+  margin-top: var(--headerheight);
+  padding: 70px 0;
+}
+@media only screen and (max-width: 540px) {
+  .faq-secA {
+    padding: 50px 0;
+  }
+}
+.faq-secA .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+@media only screen and (max-width: 1024px) {
+  .faq-secA .flex-box {
+    gap: 50px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .faq-secA .flex-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.faq-secA .flex-box .flex-box-item:first-child {
+  width: 35%;
+}
+@media only screen and (max-width: 991px) {
+  .faq-secA .flex-box .flex-box-item:first-child {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .faq-secA .flex-box .flex-box-item:first-child .tab-nav {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+  }
+}
+.faq-secA .flex-box .flex-box-item:first-child .tab-nav li {
+  color: var(--black);
+  margin-bottom: 10px;
+  padding: 10px 30px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 5px;
+  background: rgba(102, 102, 102, 0.0588235294);
+}
+@media only screen and (max-width: 991px) {
+  .faq-secA .flex-box .flex-box-item:first-child .tab-nav li {
+    white-space: nowrap;
+  }
+}
+.faq-secA .flex-box .flex-box-item:first-child .tab-nav .active {
+  color: var(--white);
+  position: relative;
+  transition: 0.5s ease;
+  background: #0BB5BD;
+}
+.faq-secA .flex-box .flex-box-item:last-child {
+  width: 100%;
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .tabs {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: 0.5s ease;
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .tabs .summery-detail-content .col {
+  margin-bottom: 15px;
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .tabs .summery-detail-content .col .title {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #EFEFEF;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .tabs .summery-detail-content .col .title .ico {
+  position: relative;
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .tabs .summery-detail-content .col .title .ico::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: black;
+  transition: 0.5s ease;
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .tabs .summery-detail-content .col .title .ico::after {
+  content: " ";
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  transform: translateX(-50%) rotate(90deg);
+  width: 20px;
+  height: 2px;
+  background: black;
+  transition: 0.5s ease;
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .tabs .summery-detail-content .col .title h6 {
+  color: #666;
+  transition: 0.5s ease;
+  padding: 0 40px 0 0;
+}
+@media only screen and (max-width: 768px) {
+  .faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .tabs .summery-detail-content .col .title h6 {
+    font-size: 16px;
+  }
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .tabs .summery-detail-content .col article .website-content p {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 24px;
+  padding-top: 7px;
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .active {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .active .summery-detail-content .active .title {
+  background: #DAFDFF;
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .active .summery-detail-content .active .title .ico {
+  position: relative;
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .active .summery-detail-content .active .title .ico::after {
+  content: " ";
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  transform: translateX(-50%) rotate(0deg);
+  width: 20px;
+  height: 2px;
+  background: black;
+  transition: 0.5s ease;
+}
+.faq-secA .flex-box .flex-box-item:last-child .tab-nav-content .active .summery-detail-content .active .title h6 {
+  color: black;
+}/*# sourceMappingURL=faq.css.map */

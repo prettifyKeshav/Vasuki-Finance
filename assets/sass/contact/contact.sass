@@ -19,7 +19,7 @@
         left: 0
         width: 100%
         height: 100%
-        background: linear-gradient(360deg, rgba(0, 0, 0, 0) 50.48%, rgba(0, 0, 0, 0.98) 100%),linear-gradient(180deg, rgba(0, 0, 0, 0) 45.79%, rgba(0, 0, 0, 0.95) 100%)
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0) 26.44%, rgba(0, 0, 0, 0.85) 100%),linear-gradient(180deg, rgba(0, 0, 0, 0) 43.27%, rgba(0, 0, 0, 0.65) 100%)
     .video-background 
         video 
             position: absolute
@@ -63,134 +63,100 @@
         top: 85%
         left: 49%
         animation: scroll 1.5s ease-in-out infinite forwards
+        
 .contact-secA
-    padding: 90px 0
-    @include media(540)
-        padding: 50px 0
-    .flex-box
-        display: flex
-        justify-content: space-evenly
-        // gap: 40px
-        overflow: hidden
-        @include media(1024)
-            justify-content: space-between
-        @include media(768)
-            justify-content: center
+    overflow: hidden
+    padding: 30px 0
+    position: relative
+    overflow: hidden
+    background: var(--gradient-a)
+    &::before
+        content: ""
+        position: absolute
+        right: 0px
+        bottom: 0px
+        width: 12%
+        height: 97%
+        background: url('../../images/contact/sec-a-bg.png')no-repeat
         @include media(540)
-            flex-direction: column-reverse
-        .flex-box-item:first-child
+            bottom: 0px
+            width: 39%
+            height: 230px
+
+    .grid-box
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 20px
+        align-items: flex-start
+        justify-content: center
+        @include media(768)
+            grid-template-columns: repeat(2, 1fr)
+        @include media(540)
+            grid-template-columns: repeat(1, 1fr)
+            grid-gap: 40px  
+        .grid-box-item
+            display: flex 
+            gap: 20px
+            width: 100%
+            height: 100%
+            justify-content: center
+            align-items: flex-start
             @include media(768)
-                display: none
-            figure
-                width: 446px
-                height: 475px
-                border-radius: 15px
-                overflow: hidden
-                img
-                    height: 100%
-                    width: 100%
-                    object-fit: cover
-        .flex-box-item:last-child
-            width: 496px
-            @include media(540)
-                width: 100%
-            .heading
-                text-align: left
-                position: relative
-                h2
-                    font-weight: 600
-                    font-size: 36px
-                    line-height: 45px
-                    margin-bottom: 30px
-                    span:nth-child(1)
-                        color: $primary
-                    span:nth-child(2)
-                        color: #666666
-                    span:nth-child(3)
-                        color: $black  
-                    @include media(768)
-                        text-align: center  
-                    @include media(540)
-                        font-size: 24px !important
-                        margin-bottom: 20px
-            ul
-                li
-                    display: flex
-                    justify-content: start
-                    gap: 20px
-                    margin-bottom: 20px
-                    a
-                        display: flex
-                        justify-content: start
-                        gap: 20px
-                        align-items: center
-                        p
-                            transition: 0.5s ease-in-out
-                            @include media(540)
-                                font-size: 13px
-                        &:hover
-                            p
-                                color:  #00498E
-                        img
-                            width: 58px
-                            aspect-ratio: 1
-                            border: 1px solid #00498E
-                            border-radius: 50%
-                            padding: 16px
-                            @include media(540)
-                                width: 39px
-                                padding: 9px
-            .view-btn
-                margin: 25px 0 10px 0
+                justify-content: flex-start
+            .content
+                max-width: 40%
                 @include media(768)
-                    text-align: center
+                    max-width: 100%
+                h3
+                    font-weight: 700
+                    font-style: Bold
+                    font-size: 16px
+                    color: white
+                    padding-bottom: 10px
+                p
+                    font-size: 14px
+                    font-weight: 400
+                    color: white    
+                    padding-bottom: 10px
                 a
-                    opacity: 1
-                    border-radius: 5px
-                    font-weight: 600
-                    padding: 8px 15px
-                    color: $text
-                    border: 1px solid $text
-                    align-items: center
-                    &:hover
-                        background: $primary
-                        border: 1px solid $primary
-                        color: $white
-
-
+                    color: white
+                    font-size: 14px
+                    font-weight: 400
+        .grid-box-item:nth-child(1)
+            border-right: 1px solid #FFFFFF5E
+            @include media(768)
+                border: none
+                
+        .grid-box-item:nth-child(2)
+            border-right: 1px solid #FFFFFF5E
+            @include media(768)
+                border: none
+                
+            .no
+                display: block
+            .whatsapp-btn
+                display: flex
+                align-items: center
+                gap: 10px
+                border-radius: 5px
+                padding: 6px 18px 
+                background: white
+                margin-top: 20px
+                span
+                    color: #09898F
+                svg
+                    path
+                        fill: #09898F
 //====================================================================>>>>>>
 .contact-secB
     overflow: hidden
     padding: 100px 0
     position: relative
     overflow: hidden
-    background: var(--gradient-a)
+    background:#F2F2F2
     @include media(540)
         padding: 50px 0
-    &::before
-        content: ""
-        position: absolute
-        top: -80px
-        right: -20px
-        width: 357px
-        height: 285px
-        background: url("../../images/home/dot-bg.png")
-        @include media(540)
-            width: 90px
-            height: 135px
-    &::after
-        content: ""
-        position: absolute
-        bottom: -140px
-        left: -20px
-        width: 357px
-        height: 285px
-        background: url("../../images/home/dot-bg.png")
-        @include media(540)
-            width: 107px
-            height: 225px
     .box
-        // border: 1px solid red
         margin: auto
         max-width: 779px
         height: auto
@@ -198,166 +164,55 @@
             text-align: center
             margin-bottom: 70px
             @include media(540)
-                margin-bottom: 50px
+                margin-bottom: 30px
             h2
                 font-weight: 600
-                color: $white
-                font-size: 36px
+                color: $black
+                font-size: 48px
                 max-width: 60%
                 margin: auto
                 @include media(540)
-                    max-width: 100%
-                    font-size: 22px !important
+                    font-size: 25px
+                    margin-bottom: 10px
 
-        .form-sec
-            .group1,.group2,.group3
-                display: flex
-                gap: 25px
-                margin-bottom: 26px
-            .group4 textarea
-                width: 100%
-                border: none
-                height: 91px
-                gap: 16px
-                border-radius: 10px
-                resize: none
-                color: #666666
-                background: white
-                margin-bottom: 20px
-                padding: 10px 10px 10px 18px
-                color: black
-                font-family: inherit !important
-                font-size: 16px
-                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px
-                &:focus-visible
-                    outline: none
-                &::placeholder
-                    color: #666666
-                    font-weight: 400
-                    font-size: 16px
-            .group5 button
-                width: 171px
-                height: 39px
-                gap: 10px
-                border-radius: 25px
-                padding-top: 10px
-                padding-right: 22px
-                padding-bottom: 10px
-                padding-left: 22px
-                background: #0A3481
-                color: white
-            .submit-button
-                text-align: center
-                margin-top: 35px
-
-                
-            input
-                width: 50%
-                border: none
-                width: 362.5
-                height: 52px
-                gap: 16px
-                border-radius: 10px
-                padding-top: 5px
-                padding-right: 17px
-                padding-bottom: 5px
-                padding-left: 17px
-                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px
-                &:focus-visible
-                        outline: none
-                &::placeholder
-                    color: #666666
-                    font-weight: 400
-                    font-size: 16px
-            .custom-select
-                display: flex
-                align-items: center
-                width:  50%
-                border: none
-                height: 52px
-                gap: 16px
-                border-radius: 10px
-                padding-top: 5px
-                padding-right: 17px
-                padding-bottom: 5px
-                padding-left: 17px
-                background: white
-                color: #666666
-                &::before
-                    right: 20px
-        form
-            .form-grid
-                --item: 2
-                --gaplr: 20px
-                --gaptb: 20px
+            p
                 @include media(540)
-                    --item: 1
-                button
-                    padding: 20px 62px
-                .form-group
-                    background-color: white
-                    border: none
-                    outline: none
+                font-size: 14px
+                line-height: 1.2
+                max-width: 90%
+                margin: auto
 
-                    border: none
-                    height: 52px
-                    gap: 16px
-                    border-radius: 10px
-                    padding: 5px 17px
-                    padding-left: 17px
-                    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px
-                    &::before
-                        background: none
-                    &::after
-                        background: none
-                    label
-                        padding-left: 15px
-                        font-weight: 500
-                        font-size: 16px
-                        line-height: 24px
-
-                .form-group:last-child
-                    border: none
-                    height: 91px
-                    gap: 16px
-                    border-radius: 10px
-                    resize: none
-                    color: #666666
-                    background: white
-                    margin-bottom: 20px
-                    padding: 10px 10px 10px 18px
-                    color: black
-                    font-family: inherit !important
-                    font-size: 16px
-                    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px
-                .span-2
-                    grid-column: span 2
-                    height: 100px
-                    @include media(540)
-                        grid-column: span 1
-                .submit-btn
-                    width: 180px
-                    height: 45px
-                    border-radius: 5px
-                    padding: 16px
-                    color: $white
-                    background: #5393C5
-                    border: 1px solid #5393C5
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    margin: auto
-                    transition: 0.5s ease
-                    font-weight: 600
-                    font-family: Poppins
-                    font-weight: 600
-                    font-size: 16px
-                    line-height: 24px
-
-                    &:hover
-                        background: transparent
-                        border: 1px solid white
+        .form
+            margin: auto
+            --item: 2
+            @include media(768)
+                max-width: 80%
+            @include media(540)
+                --item: 1
+                --gaptb: 22px
+                max-width: 90%
+            .form-group
+                &::before
+                    background: $text
+                .custom-select .current
+                    color: $text
+            label
+                color: $text
+            .bottom-btn
+                margin: auto
+            .dropdown-input
+                text-align: left
+                .list
+                    li
+                        color: $text
                         transition: 0.5s ease
+                        &.focus
+                            color: white
+                        &:hover
+                            color: $white
+                            background: $primary
+            .btn2
+                margin: 10px auto 0px auto
 //====================================================================>>>>>>
  
 .contact-secC
@@ -373,41 +228,4 @@
             height: 50vh
         @include media(540)
             height: 60vh
-    .box
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-        text-align: center
-        @include media(540)
-            height: fit-content
-            width: 100%
-        img
-            margin-bottom: 20px
-            @include media(540)
-                width: 30px
-        .address
-            padding: 30px
-            background: $white
-            box-shadow: 0px 2px 12px 3px #00000026
-            width: 393px
-            height: 203px
-            border-radius: 10px
-            text-align: center
-            position: relative
-            @include media(540)
-                height: fit-content
-                width: 80%
-                margin: auto
-
-            p
-                margin-bottom: 20px
-                @include media(540)
-                    font-size: 12px
-            a
-                font-weight: 600
-                font-size: 16px
-                color: #5393C5
-                line-height: 24px
-
-
+   

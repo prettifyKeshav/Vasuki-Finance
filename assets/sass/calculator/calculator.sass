@@ -1,0 +1,1924 @@
+@import '../_var'
+
+
+.calculator-banner
+    position: relative
+    color: white
+    overflow: hidden
+    height: 80vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @include media(1024)
+        height: 70vh
+    @include media(991)
+        height: 60vh
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0) 26.44%, rgba(0, 0, 0, 0.85) 100%),linear-gradient(180deg, rgba(0, 0, 0, 0) 43.27%, rgba(0, 0, 0, 0.65) 100%)
+
+    .video-background 
+        video 
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -1
+    .bg-wrapper
+        position: absolute
+        bottom: 14%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        width: 100%
+        @include media(540)
+            bottom: 15%
+        h1
+            font-weight: 700
+            font-size: 48px
+            line-height: 50px
+            text-align: center
+            margin-bottom: 18px
+            max-width: 38%
+            margin: auto
+            @include media(1024)
+                max-width: 70%
+            @include media(540)
+                margin-bottom: 7px
+                font-size: 30px
+                line-height: 1.3
+                max-width: 95%
+                
+
+        p
+            font-family: $Poppins
+            font-weight: 500
+            font-size: 16px
+            line-height: 100%
+            color: $white
+            @include media(540)
+                font-size: 13px 
+                max-width: 100%
+                margin: auto
+    .scroll-btn
+        position: absolute
+        bottom: 12%
+        left: 49%
+        animation: scroll 1.5s ease-in-out infinite forwards
+        
+.loan-repayment-cal
+    padding: 70px 0
+    @include media(540)
+        padding: 50px 0
+    #chart_section
+        width: 500px
+        height: auto
+        margin: auto
+        @include media(1024)
+            width: 100%
+        .highcharts-9k1xnpn-0
+
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 30px
+        @include media(1024)
+            flex-direction: column
+        .flex-box-item:first-child
+            background: #F3F3F3
+            width: 33%
+            border-radius: 10px
+            padding: 20px 20px
+            @include media(1024)
+                width: 100%
+            .input-form
+                h2
+                    font-weight: 500
+                    font-size: 20px 
+                    line-height: 20px
+                    color: $black
+                    padding-bottom: 40px
+                .form-group:nth-child(6)
+                    display: flex
+                    label
+                        width: 40%
+                    .right
+                        width: 56%
+                        display: flex
+                        justify-content: space-between
+                        gap: 10px
+                        @include media(540)
+                            width: 100%
+                        input
+                            width: 33%
+                        .custom-select
+                            width: 190px
+
+                .form-group:nth-child(7)
+                    justify-content: end
+                    gap: 10px
+                    padding-top: 20px
+
+                .form-group
+                    margin-bottom: 15px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    @include media(540)
+                        flex-direction: column
+                        align-items: unset
+                        gap: 10px
+                    label
+                        font-weight: 400
+                        color: $black
+                        font-size: 14px
+                        line-height: 20px
+                        width: fit-content
+                    input
+                        padding: 8px 8px 8px 20px
+                        border: none
+                        border-radius: 4px
+                        box-sizing: border-box
+                        @include media(1024)
+                            width: 55.7%
+                        @include media(540)
+                            width: 100%
+                    .custom-select
+                        padding: 8px 8px 8px 20px
+                        border: none
+                        border-radius: 4px
+                        box-sizing: border-box
+                        background: white
+                        width: 55.7%
+                        @include media(540)
+                            width: 100%
+                        &::before
+                            right: 25px
+                        span
+                            color: $text
+                .calculate-btn
+                    padding: 20px 10px
+                    border-radius: 25px
+                    padding: 10px 26px
+
+                    font-weight: 500
+                    font-size: 15px
+                    background: var(--gradient-a)
+                    color: $white
+                .reset-btn
+                    padding: 20px 10px
+                    border-radius: 25px
+                    padding: 10px 26px
+
+                    font-weight: 500
+                    font-size: 15px
+                    background: #C2FBFE 
+                    color: $black
+
+        .flex-box-item:last-child
+            border-radius: 10px
+            width: 66%
+            border: 1px solid #D0D0D0
+            display: flex
+            justify-content: space-between
+            @include media(1024)
+                width: 100%
+                flex-direction: column
+            .chart-section-main
+                h2
+                    font-weight: 500
+                    color: black
+                    font-size: 20px
+                    line-height: 20px
+                    border-bottom: 1px solid #FFFFFF85
+                    padding: 20px
+                #chart_section
+                    padding: 10px
+                    .highcharts-credits
+                        display: none
+                    // .highcharts-axis highcharts-yaxis
+                    .highcharts-axis-title,.highcharts-yaxis
+                        font-weight: 400
+                        font-size: 16px !important
+                        color: $text 
+                        font-family: $Brother1816
+
+            .results-section
+                width: 300px
+                height: 100%
+                border-radius: 10px
+                background: var(--gradient-a)
+                padding: 30px
+                @include media(1024)
+                    width: 100%
+                h2
+                    font-weight: 700
+                    color: white
+                    font-size: 20px
+                    line-height: 20px
+                    border-bottom: 1px solid #FFFFFF85
+                    padding: 0 0 15px 0
+                .content
+                    padding: 10px 0 0 5px 
+                    .result-item
+                        padding: 10px 0
+                        h3
+                            color: white
+                            font-weight: 400
+                            font-size: 16px
+                            line-height: 20px
+                            padding:0 0 10px 0
+                        span
+                            font-weight: 500
+                            color: $white
+                            font-size: 24px
+                            line-height: 20px
+                .btn
+                    width: 100%
+                    text-align: center
+                    margin: 0
+                    padding-bottom: 30px
+                    a
+                        width: 100%
+                        text-align: center
+                .print-assumption
+                    display: flex
+                    justify-content: space-between
+                    align-content: center
+                    a:first-child
+                        border: 1px solid white
+                        line-height: 20px
+                        border-radius: 5px
+                        padding: 6px 10px
+                        
+                        display: flex
+                        justify-content: center
+                        align-content: center
+                        gap: 7px
+                        width: fit-content
+                        transition: 0.5s ease
+                        svg
+                            path
+                                transition: 0.5s ease
+                                fill: $white
+                        span
+                            color: $white
+                            font-weight: 500
+                            font-size: 16px
+                            transition: 0.5s ease
+                        &:hover
+                            background: white
+                            span
+                                color: $primary
+                            svg path
+                                fill: $primary
+                    a:last-child
+                        border: 1px solid white
+                        line-height: 20px
+                        border-radius: 5px
+                        padding: 6px 10px
+                        
+                        display: flex
+                        justify-content: center
+                        align-content: center
+                        gap: 7px
+                        width: fit-content
+                        transition: 0.5s ease
+                        svg
+                            path
+                                transition: 0.5s ease
+                                fill: $white
+                                
+                        span
+                            color: $white
+                            font-weight: 500
+                            font-size: 16px
+                            transition: 0.5s ease
+                        &:hover
+                            background: white
+                            span
+                                color: $primary
+                            svg path
+                                fill: $primary
+
+.stamp-duty-cal
+    padding: 70px 0
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 30px
+        @include media(1024)
+            flex-direction: column
+        .flex-box-item:first-child
+            background: #F3F3F3
+            width: 58%
+            border-radius: 10px
+            @include media(1024)
+                width: 100%
+            .form-section
+                .form-tab-nav
+                    border-bottom: 1px solid #0BB5BD
+                    ul
+                        padding: 15px 25px
+                        list-style-type: none
+                        display: flex
+                        justify-content: space-around
+                        @include media(540)
+                            padding: 15px 5px 13px 5px
+                            
+                        li
+                            font-weight: 500
+                            cursor: pointer
+                            font-size: 16px
+                            color: $text
+                            position: relative
+                            transition: 0.3s ease
+                            @include media(540)
+                                font-size: 14px
+                            &::before
+                                content: ''
+                                position: absolute
+                                top: 160%
+                                left: 50%
+                                transform: translate(-50%, -50%)
+                                width: 13px
+                                height: 13px
+                                border-radius: 50%
+                                background: $white
+                                border:1px solid #50A6AA
+                                transition: 0.3s ease
+                        .active
+                            color: #0BA1A7
+                            &::before
+                                background: #0BB5BD 
+                .form-tab-content
+                    .input-form
+                        margin-top: 20px
+                        padding: 20px 20px
+
+                        h2
+                            font-weight: 500
+                            font-size: 20px 
+                            line-height: 20px
+                            color: $black
+                            padding-bottom: 20px
+                        .form-group
+                            margin-bottom: 15px
+                            display: flex
+                            justify-content: start
+                            align-items: center
+                            @include media(768)
+                                gap: 10px
+                                flex-direction: column
+                                align-items: unset
+
+                            .options 
+                                display: flex
+                                input[type="radio"]
+                                    display: none
+                                input[type="radio"]:checked + label 
+                                    background-color: #0BA1A7
+                                    color: #fff
+                                label 
+                                    display: inline-block
+                                    padding: 10px 20px
+                                    margin-right: 10px
+                                    transition: all 0.3s ease
+                                    border: none
+                                    border-radius: 5px
+                                    cursor: pointer
+                                    transition: 0.3s ease
+                                    color: #666666
+                                    background: white
+                                    width: fit-content
+                            .hkgskdg
+                                @include media(540)
+                                    justify-content: space-between
+                                    gap: 20px
+                                label
+                                    @include media(540)
+                                        width: 50%
+                                        margin: 0
+                            .klhjgvyr
+                                @include media(540)
+                                    flex-direction: column
+                                    gap: 10px
+                                label
+                                    @include media(540)
+                                        width: 100%
+                            label
+                                font-weight: 400
+                                color: $black
+                                font-size: 14px
+                                line-height: 20px
+                                width: fit-content
+                                width: 36%
+                                @include media(540)
+                                    width: 100%
+                            input
+                                padding: 8px 8px 8px 20px
+                                border: none
+                                border-radius: 4px
+                                box-sizing: border-box
+                            .custom-select
+                                padding: 8px 28px 8px 20px
+                                border: none
+                                border-radius: 4px
+                                box-sizing: border-box
+                                background: white
+                                // width: 55.7%
+                                &::before
+                                    right: 25px
+                                span
+                                    color: $text
+                        .calculate-btn
+                            padding: 20px 10px
+                            border-radius: 25px
+                            padding: 10px 26px
+
+                            font-weight: 500
+                            font-size: 15px
+                            background: var(--gradient-a)
+                            color: $white
+                            margin-right: 10px
+                        .reset-btn
+                            padding: 20px 10px
+                            border-radius: 25px
+                            padding: 10px 26px
+
+                            font-weight: 500
+                            font-size: 15px
+                            background: #C2FBFE 
+                            color: $black
+
+        .flex-box-item:last-child
+            border-radius: 10px
+            width: 40%
+            border: 1px solid #D0D0D0
+            display: flex
+            justify-content: space-between
+            @include media(1024)
+                width: 100%
+            @include media(540)
+                flex-direction: column
+                gap: 20px
+            .gov-grant-gov-fees
+                h2
+                    font-weight: 500
+                    color: black
+                    font-size: 20px
+                    line-height: 20px
+                    border-bottom: 1px solid #FFFFFF85
+                    padding: 20px 0px 20px 20px
+                .result-item1
+                    margin-left: 20px 
+                    .cont
+                        border-bottom:1px solid #00000017
+                        padding: 0 0 40px 0
+                    h3
+                        font-weight: 400
+                        color: black
+                        font-size: 14px
+                        line-height: 20px
+                        border-bottom: 1px solid #FFFFFF85
+                        color: #666666
+                        padding-bottom: 10px 
+                    span
+                        font-weight: 500
+                        font-size: 20px
+                        line-height: 20px
+                        color: $text
+                .result-item2
+                    margin: 20px 0 0 20px  
+                    h3
+                        font-weight: 400
+                        color: black
+                        font-size: 14px
+                        line-height: 20px
+                        border-bottom: 1px solid #FFFFFF85
+                        color: #0BA1A7
+                        padding-bottom: 10px 
+
+                    span
+                        font-weight: 500
+                        font-size: 20px
+                        line-height: 20px
+                        color: #0BA1A7
+
+
+            .results-section
+                width: 300px
+                height: 100%
+                border-radius: 10px
+                background: var(--gradient-a)
+                padding: 30px
+                @include media(540)
+                    width: 100%
+                h2
+                    font-weight: 700
+                    color: white
+                    font-size: 20px
+                    line-height: 20px
+                    border-bottom: 1px solid #FFFFFF85
+                    padding: 0 0 15px 0
+                .content
+                    padding: 10px 0 0 5px 
+                    .result-item
+                        padding: 10px 0
+                        h3
+                            color: white
+                            font-weight: 400
+                            font-size: 16px
+                            line-height: 20px
+                            padding:0 0 10px 0
+                        span
+                            font-weight: 500
+                            color: $white
+                            font-size: 24px
+                            line-height: 20px
+                .btn
+                    width: 100%
+                    text-align: center
+                    margin: 0
+                    padding-bottom: 30px
+                    a
+                        width: 100%
+                        text-align: center
+                .print-assumption
+                    display: flex
+                    justify-content: space-between
+                    align-content: center
+                    a:first-child
+                        border: 1px solid white
+                        line-height: 20px
+                        border-radius: 5px
+                        padding: 6px 10px
+                        
+                        display: flex
+                        justify-content: center
+                        align-content: center
+                        gap: 7px
+                        width: fit-content
+                        transition: 0.5s ease
+                        svg
+                            path
+                                transition: 0.5s ease
+                                fill: $white
+                        span
+                            color: $white
+                            font-weight: 500
+                            font-size: 16px
+                            transition: 0.5s ease
+                        &:hover
+                            background: white
+                            span
+                                color: $primary
+                            svg path
+                                fill: $primary
+                    a:last-child
+                        border: 1px solid white
+                        line-height: 20px
+                        border-radius: 5px
+                        padding: 6px 10px
+                        
+                        display: flex
+                        justify-content: center
+                        align-content: center
+                        gap: 7px
+                        width: fit-content
+                        transition: 0.5s ease
+                        svg
+                            path
+                                transition: 0.5s ease
+                                fill: $white
+                                
+                        span
+                            color: $white
+                            font-weight: 500
+                            font-size: 16px
+                            transition: 0.5s ease
+                        &:hover
+                            background: white
+                            span
+                                color: $primary
+                            svg path
+                                fill: $primary
+
+.lump-sum-repayment-cal
+    padding: 70px 0
+    #chart_section
+        width: 500px
+        margin: auto
+        @include media(768)
+            width:100%
+
+    .highcharts-series-1
+        display: none
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 30px
+        @include media(1024)
+            flex-direction: column
+        .flex-box-item:first-child
+            background: #F3F3F3
+            width: 33%
+            border-radius: 10px
+            padding: 20px 20px
+            @include media(1024)
+                width: 100%
+            .input-form
+                h2
+                    font-weight: 500
+                    font-size: 20px 
+                    line-height: 20px
+                    color: $black
+                    padding-bottom: 20px
+                .second
+                    padding: 20px 0 
+                .form-group:last-child
+                    justify-content: end
+                    gap: 10px
+                    padding-top: 20px
+
+                .form-group
+                    margin-bottom: 15px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    @include media(540)
+                        flex-direction: column
+                        align-items: unset
+                        gap: 10px
+                    label
+                        font-weight: 400
+                        color: $black
+                        font-size: 14px
+                        line-height: 20px
+                        width: fit-content
+                    input
+                        padding: 8px 8px 8px 20px
+                        border: none
+                        border-radius: 4px
+                        box-sizing: border-box
+                        @include media(1024)
+                            width: 55.7%
+                        @include media(540)
+                            width: 100%
+                    .custom-select
+                        padding: 8px 8px 8px 20px
+                        border: none
+                        border-radius: 4px
+                        box-sizing: border-box
+                        background: white
+                        width: 55.7%
+                        @include media(540)
+                            width: 100%
+                        &::before
+                            right: 25px
+                        span
+                            color: $text
+                .calculate-btn
+                    padding: 20px 10px
+                    border-radius: 25px
+                    padding: 10px 26px
+
+                    font-weight: 500
+                    font-size: 15px
+                    background: var(--gradient-a)
+                    color: $white
+                .reset-btn
+                    padding: 20px 10px
+                    border-radius: 25px
+                    padding: 10px 26px
+
+                    font-weight: 500
+                    font-size: 15px
+                    background: #C2FBFE 
+                    color: $black
+
+        .flex-box-item:last-child
+            border-radius: 10px
+            width: 66%
+            border: 1px solid #D0D0D0
+            display: flex
+            justify-content: space-between
+            @include media(1024)
+                width: 100%
+            @include media(768)
+                flex-direction: column
+            .chart-section-main
+                h2
+                    font-weight: 500
+                    color: black
+                    font-size: 20px
+                    line-height: 20px
+                    border-bottom: 1px solid #FFFFFF85
+                    padding: 20px
+                #chart_section
+                    padding: 10px
+                    .highcharts-credits
+                        display: none
+                    // .highcharts-axis highcharts-yaxis
+                    .highcharts-axis-title,.highcharts-yaxis
+                        font-weight: 400
+                        font-size: 16px !important
+                        color: $text 
+                        font-family: $Brother1816
+
+            .results-section
+                width: 300px
+                height: 100%
+                border-radius: 10px
+                background: var(--gradient-a)
+                padding: 30px
+                @include media(768)
+                    width: 100%
+                h2
+                    font-weight: 700
+                    color: white
+                    font-size: 20px
+                    line-height: 20px
+                    border-bottom: 1px solid #FFFFFF85
+                    padding: 0 0 15px 0
+                .content
+                    padding: 10px 0 0 5px 
+                    .result-item
+                        padding: 10px 0
+                        h3
+                            color: white
+                            font-weight: 400
+                            font-size: 16px
+                            line-height: 20px
+                            padding:0 0 10px 0
+                        span
+                            font-weight: 500
+                            color: $white
+                            font-size: 24px
+                            line-height: 20px
+                .btn
+                    width: 100%
+                    text-align: center
+                    margin: 0
+                    padding-bottom: 30px
+                    a
+                        width: 100%
+                        text-align: center
+                .print-assumption
+                    display: flex
+                    justify-content: space-between
+                    align-content: center
+                    a:first-child
+                        border: 1px solid white
+                        line-height: 20px
+                        border-radius: 5px
+                        padding: 6px 10px
+                        
+                        display: flex
+                        justify-content: center
+                        align-content: center
+                        gap: 7px
+                        width: fit-content
+                        transition: 0.5s ease
+                        svg
+                            path
+                                transition: 0.5s ease
+                                fill: $white
+                        span
+                            color: $white
+                            font-weight: 500
+                            font-size: 16px
+                            transition: 0.5s ease
+                        &:hover
+                            background: white
+                            span
+                                color: $primary
+                            svg path
+                                fill: $primary
+                    a:last-child
+                        border: 1px solid white
+                        line-height: 20px
+                        border-radius: 5px
+                        padding: 6px 10px
+                        
+                        display: flex
+                        justify-content: center
+                        align-content: center
+                        gap: 7px
+                        width: fit-content
+                        transition: 0.5s ease
+                        svg
+                            path
+                                transition: 0.5s ease
+                                fill: $white
+                                
+                        span
+                            color: $white
+                            font-weight: 500
+                            font-size: 16px
+                            transition: 0.5s ease
+                        &:hover
+                            background: white
+                            span
+                                color: $primary
+                            svg path
+                                fill: $primary
+
+
+.extra-repayment-cal
+    padding: 70px 0
+    #chart_section
+        width: 500px
+        margin: auto
+        @include media(768)
+            width:100%
+    .highcharts-series-1
+        display: none
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 30px
+        @include media(1024)
+            flex-direction: column
+        .flex-box-item:first-child
+            background: #F3F3F3
+            width: 33%
+            border-radius: 10px
+            padding: 20px 20px
+            @include media(1024)
+                width: 100%
+            .input-form
+                h2
+                    font-weight: 500
+                    font-size: 20px 
+                    line-height: 20px
+                    color: $black
+                    padding-bottom: 20px
+                .second
+                    padding: 20px 0 
+                .form-group:last-child
+                    justify-content: end
+                    gap: 10px
+                    padding-top: 20px
+
+                .form-group
+                    margin-bottom: 15px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    @include media(540)
+                        flex-direction: column
+                        align-items: unset
+                        gap: 10px
+                    label
+                        font-weight: 400
+                        color: $black
+                        font-size: 14px
+                        line-height: 20px
+                        width: fit-content
+                    input
+                        padding: 8px 8px 8px 20px
+                        border: none
+                        border-radius: 4px
+                        box-sizing: border-box
+                        @include media(1024)
+                            width: 55.7%
+                        @include media(540)
+                            width: 100%
+                    .custom-select
+                        padding: 8px 8px 8px 20px
+                        border: none
+                        border-radius: 4px
+                        box-sizing: border-box
+                        background: white
+                        width: 55.7%
+                        @include media(540)
+                            width: 100%
+                        &::before
+                            right: 25px
+                        span
+                            color: $text
+                .calculate-btn
+                    padding: 20px 10px
+                    border-radius: 25px
+                    padding: 10px 26px
+
+                    font-weight: 500
+                    font-size: 15px
+                    background: var(--gradient-a)
+                    color: $white
+                .reset-btn
+                    padding: 20px 10px
+                    border-radius: 25px
+                    padding: 10px 26px
+
+                    font-weight: 500
+                    font-size: 15px
+                    background: #C2FBFE 
+                    color: $black
+
+        .flex-box-item:last-child
+            border-radius: 10px
+            width: 66%
+            border: 1px solid #D0D0D0
+            display: flex
+            justify-content: space-between
+            @include media(1024)
+                width: 100%
+            @include media(768)
+                flex-direction: column
+            .chart-section-main
+                h2
+                    font-weight: 500
+                    color: black
+                    font-size: 20px
+                    line-height: 20px
+                    border-bottom: 1px solid #FFFFFF85
+                    padding: 20px
+                #chart_section
+                    padding: 10px
+                    .highcharts-credits
+                        display: none
+                    // .highcharts-axis highcharts-yaxis
+                    .highcharts-axis-title,.highcharts-yaxis
+                        font-weight: 400
+                        font-size: 16px !important
+                        color: $text 
+                        font-family: $Brother1816
+
+            .results-section
+                width: 300px
+                height: 100%
+                border-radius: 10px
+                background: var(--gradient-a)
+                padding: 30px
+                @include media(768)
+                    width: 100%
+                h2
+                    font-weight: 700
+                    color: white
+                    font-size: 20px
+                    line-height: 20px
+                    border-bottom: 1px solid #FFFFFF85
+                    padding: 0 0 15px 0
+                .content
+                    padding: 10px 0 0 5px 
+                    .result-item
+                        padding: 10px 0
+                        h3
+                            color: white
+                            font-weight: 400
+                            font-size: 16px
+                            line-height: 20px
+                            padding:0 0 10px 0
+                        span
+                            font-weight: 500
+                            color: $white
+                            font-size: 24px
+                            line-height: 20px
+                .btn
+                    width: 100%
+                    text-align: center
+                    margin: 0
+                    padding-bottom: 30px
+                    a
+                        width: 100%
+                        text-align: center
+                .print-assumption
+                    display: flex
+                    justify-content: space-between
+                    align-content: center
+                    a:first-child
+                        border: 1px solid white
+                        line-height: 20px
+                        border-radius: 5px
+                        padding: 6px 10px
+                        
+                        display: flex
+                        justify-content: center
+                        align-content: center
+                        gap: 7px
+                        width: fit-content
+                        transition: 0.5s ease
+                        svg
+                            path
+                                transition: 0.5s ease
+                                fill: $white
+                        span
+                            color: $white
+                            font-weight: 500
+                            font-size: 16px
+                            transition: 0.5s ease
+                        &:hover
+                            background: white
+                            span
+                                color: $primary
+                            svg path
+                                fill: $primary
+                    a:last-child
+                        border: 1px solid white
+                        line-height: 20px
+                        border-radius: 5px
+                        padding: 6px 10px
+                        
+                        display: flex
+                        justify-content: center
+                        align-content: center
+                        gap: 7px
+                        width: fit-content
+                        transition: 0.5s ease
+                        svg
+                            path
+                                transition: 0.5s ease
+                                fill: $white
+                                
+                        span
+                            color: $white
+                            font-weight: 500
+                            font-size: 16px
+                            transition: 0.5s ease
+                        &:hover
+                            background: white
+                            span
+                                color: $primary
+                            svg path
+                                fill: $primary
+
+.home-loan-offset-cal
+    padding: 70px 0
+    #chart_section
+        width: 500px
+        margin: auto
+        @include media(768)
+            width: 100%
+    .highcharts-series-1
+        display: none
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 30px
+        @include media(1024)
+            flex-direction: column
+        .flex-box-item:first-child
+            background: #F3F3F3
+            width: 33%
+            border-radius: 10px
+            padding: 20px 20px
+            @include media(1024)
+                width: 100%
+            .input-form
+                h2
+                    font-weight: 500
+                    font-size: 20px 
+                    line-height: 20px
+                    color: $black
+                    padding-bottom: 20px
+                .second
+                    padding: 20px 0 
+                .form-group:last-child
+                    justify-content: end
+                    gap: 10px
+                    padding-top: 20px
+
+                .form-group
+                    margin-bottom: 15px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    @include media(540)
+                        flex-direction: column
+                        align-items: unset
+                        gap: 10px
+                    label
+                        font-weight: 400
+                        color: $black
+                        font-size: 14px
+                        line-height: 20px
+                        width: fit-content
+                    input
+                        padding: 8px 8px 8px 20px
+                        border: none
+                        border-radius: 4px
+                        box-sizing: border-box
+                        @include media(1024)
+                            width: 55.7%
+                        @include media(540)
+                            width: 100%
+                    .custom-select
+                        padding: 8px 8px 8px 20px
+                        border: none
+                        border-radius: 4px
+                        box-sizing: border-box
+                        background: white
+                        width: 55.7%
+                        @include media(540)
+                            width: 100%
+                        &::before
+                            right: 25px
+                        span
+                            color: $text
+                .calculate-btn
+                    padding: 20px 10px
+                    border-radius: 25px
+                    padding: 10px 26px
+
+                    font-weight: 500
+                    font-size: 15px
+                    background: var(--gradient-a)
+                    color: $white
+                .reset-btn
+                    padding: 20px 10px
+                    border-radius: 25px
+                    padding: 10px 26px
+
+                    font-weight: 500
+                    font-size: 15px
+                    background: #C2FBFE 
+                    color: $black
+
+        .flex-box-item:last-child
+            border-radius: 10px
+            width: 66%
+            border: 1px solid #D0D0D0
+            display: flex
+            justify-content: space-between
+            @include media(1024)
+                width: 100%
+            @include media(768)
+                flex-direction: column
+            .chart-section-main
+                h2
+                    font-weight: 500
+                    color: black
+                    font-size: 20px
+                    line-height: 20px
+                    border-bottom: 1px solid #FFFFFF85
+                    padding: 20px
+                // #chart_section
+                //     padding: 10px
+                //     .highcharts-credits
+                //         display: none
+                //     // .highcharts-axis highcharts-yaxis
+                //     .highcharts-axis-title,.highcharts-yaxis
+                //         font-weight: 400
+                //         font-size: 16px !important
+                //         color: $text 
+                //         font-family: $Brother1816
+
+            .results-section
+                width: 300px
+                height: 100%
+                border-radius: 10px
+                background: var(--gradient-a)
+                padding: 30px
+                @include media(768)
+                    width: 100%
+                h2
+                    font-weight: 700
+                    color: white
+                    font-size: 20px
+                    line-height: 20px
+                    border-bottom: 1px solid #FFFFFF85
+                    padding: 0 0 15px 0
+                .content
+                    padding: 10px 0 0 5px 
+                    .result-item
+                        padding: 10px 0
+                        h3
+                            color: white
+                            font-weight: 400
+                            font-size: 16px
+                            line-height: 20px
+                            padding:0 0 10px 0
+                        span
+                            font-weight: 500
+                            color: $white
+                            font-size: 24px
+                            line-height: 20px
+                .btn
+                    width: 100%
+                    text-align: center
+                    margin: 0
+                    padding-bottom: 30px
+                    a
+                        width: 100%
+                        text-align: center
+                .print-assumption
+                    display: flex
+                    justify-content: space-between
+                    align-content: center
+                    a:first-child
+                        border: 1px solid white
+                        line-height: 20px
+                        border-radius: 5px
+                        padding: 6px 10px
+                        
+                        display: flex
+                        justify-content: center
+                        align-content: center
+                        gap: 7px
+                        width: fit-content
+                        transition: 0.5s ease
+                        svg
+                            path
+                                transition: 0.5s ease
+                                fill: $white
+                        span
+                            color: $white
+                            font-weight: 500
+                            font-size: 16px
+                            transition: 0.5s ease
+                        &:hover
+                            background: white
+                            span
+                                color: $primary
+                            svg path
+                                fill: $primary
+                    a:last-child
+                        border: 1px solid white
+                        line-height: 20px
+                        border-radius: 5px
+                        padding: 6px 10px
+                        
+                        display: flex
+                        justify-content: center
+                        align-content: center
+                        gap: 7px
+                        width: fit-content
+                        transition: 0.5s ease
+                        svg
+                            path
+                                transition: 0.5s ease
+                                fill: $white
+                                
+                        span
+                            color: $white
+                            font-weight: 500
+                            font-size: 16px
+                            transition: 0.5s ease
+                        &:hover
+                            background: white
+                            span
+                                color: $primary
+                            svg path
+                                fill: $primary
+
+.borrowing-capacity-cal
+    padding: 70px 0
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 30px
+        @include media(991)
+            flex-direction: column
+        .flex-box-item:first-child
+            background: #F3F3F3
+            width: 58%
+            border-radius: 10px
+            @include media(768)
+                width: 100%
+            .form-section
+                .form-tab-nav
+                    border-bottom: 1px solid #0BB5BD
+                    ul
+                        padding: 15px 25px
+                        list-style-type: none
+                        display: flex
+                        justify-content: start
+                        gap: 60px
+                        @include media(540)
+                            gap: 0
+                            justify-content: space-between
+
+                        li
+                            font-weight: 500
+                            cursor: pointer
+                            font-size: 16px
+                            color: $text
+                            position: relative
+                            transition: 0.3s ease
+                            &::before
+                                content: ''
+                                position: absolute
+                                top: 160%
+                                left: 50%
+                                transform: translate(-50%, -50%)
+                                width: 13px
+                                height: 13px
+                                border-radius: 50%
+                                background: $white
+                                border:1px solid #50A6AA
+                                transition: 0.3s ease
+                        .active
+                            color: #0BA1A7
+                            &::before
+                                background: #0BB5BD 
+                .form-tab-content
+                    .input-form
+                        margin-top: 20px
+                        padding: 20px 20px
+
+                        h2
+                            font-weight: 500
+                            font-size: 20px 
+                            line-height: 20px
+                            color: $black
+                            padding-bottom: 20px
+                        .form-group
+                            margin-bottom: 15px
+                            display: flex
+                            justify-content: start
+                            align-items: center
+                            @include media(540)
+                                flex-direction: column
+                                align-items: unset
+                                gap: 10px
+                            label
+                                font-weight: 400
+                                color: $black
+                                font-size: 14px
+                                line-height: 20px
+                                width: fit-content
+                                width: 36%
+                                @include media(540)
+                                    width: 100%
+                            input
+                                padding: 8px 8px 8px 20px
+                                border: none
+                                border-radius: 4px
+                                box-sizing: border-box
+                            .options 
+                                display: flex
+                                @include media(540)
+                                    gap: 10px
+                                input[type="radio"]
+                                    display: none
+                                input[type="radio"]:checked + label 
+                                    background-color: #0BA1A7
+                                    color: #fff
+                                label 
+                                    display: inline-block
+                                    padding: 10px 20px
+                                    margin-right: 10px
+                                    transition: all 0.3s ease
+                                    border: none
+                                    border-radius: 5px
+                                    cursor: pointer
+                                    transition: 0.3s ease
+                                    color: #666666
+                                    background: white
+                                    width: fit-content
+                                    @include media(540)
+                                        width: 50%
+                                        margin-right: 0
+                            .custom-select
+                                padding: 8px 28px 8px 20px
+                                border: none
+                                border-radius: 4px
+                                box-sizing: border-box
+                                background: white
+                                // width: 55.7%
+                                &::before
+                                    right: 25px
+                                span
+                                    color: $text
+                        .calculate-btn
+                            padding: 20px 10px
+                            border-radius: 25px
+                            padding: 10px 26px
+
+                            font-weight: 500
+                            font-size: 15px
+                            background: var(--gradient-a)
+                            color: $white
+                            margin-right: 15px
+                        .reset-btn
+                            padding: 20px 10px
+                            border-radius: 25px
+                            padding: 10px 26px
+
+                            font-weight: 500
+                            font-size: 15px
+                            background: #C2FBFE 
+                            color: $black                 
+        .flex-box-item:last-child
+            border-radius: 10px
+            width: 40%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            gap: 20px
+            @include media(1024)
+                width: 55%
+            @include media(768)
+                width: 100%
+            .flex-box-item-2:first-child
+                width: 100%
+                border-radius: 10px
+                border: 1px solid #D0D0D0
+                display: flex
+                flex-direction: column
+                height: fit-content
+                form
+                    h2
+                        font-weight: 500
+                        color: black
+                        font-size: 20px
+                        line-height: 20px
+                        border-bottom: 1px solid #FFFFFF85
+                        padding: 20px 0px 20px 20px
+                        text-align: center
+                        @include media(768)
+                            text-align: left
+                        @include media(540)
+                            text-align: center
+                    .one
+                        display: flex
+                        justify-content: start
+                        align-items: center
+                        padding: 0 20px
+                        gap: 20px
+                        @include media(540)
+                            justify-content: space-between
+                        .form-group
+                            display: flex
+                            align-items: center
+                            gap: 10px
+                            label
+                                font-weight: 400
+                                font-size: 14px
+                                line-height: 20px
+                                color: $text
+                                cursor: pointer
+                                @include media(540)
+                                    white-space: nowrap
+                            .custom-radio
+                                appearance: none
+                                -webkit-appearance: none
+                                -moz-appearance: none
+                                width: 20px
+                                height: 20px
+                                border: 1px solid #0BA0A6
+                                border-radius: 50%
+                                position: relative
+                                cursor: pointer
+                                transition: border-color 0.3s ease
+                            .custom-radio:checked
+                                border-color: #0aafb4
+                                transition: 0.3s ease
+
+                            .custom-radio:checked::before
+                                content: ''
+                                position: absolute
+                                top: 50%
+                                left: 50%
+                                transform: translate(-50%, -50%)
+                                width: 10px
+                                height: 10px
+                                background-color: #0aafb4 
+                                border-radius: 50%
+                                transition: opacity 0.3s ease, background-color 0.3s ease
+                    .two
+                        margin: 40px 20px
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        @include media(768)
+                            justify-content: start
+                            gap: 40px
+                        @include media(540)
+                            flex-direction: column
+                            gap: 10px
+                        .form-group
+                            width: 137px
+                            height: 40px
+                            @include media(540)
+                                width: 100%
+                            
+                        .custom-select
+                            padding: 8px 38px 8px 20px
+                            border: none
+                            border-radius: 4px
+                            box-sizing: border-box
+                            background: white
+                            width: fit-content
+                            border: 1px solid #666666
+                            width: 100%
+                            height: 100%
+                            &::before
+                                right: 25px
+                            span
+                                color: $text
+                        input
+                            padding: 8px 8px 8px 20px
+                            border: none
+                            border-radius: 4px
+                            box-sizing: border-box      
+                            border: 1px solid #666666
+                            width:  100%    
+                            height: 100%
+            .flex-box-item-2:last-child
+                width: 100%
+                border-radius: 10px
+                display: flex
+                flex-direction: column
+                height: fit-content
+                background: var(--gradient-a)
+                padding: 20px
+                .results-section
+                    display: flex
+                    justify-content: space-around
+                    gap: 80px
+                    @include media(1024)
+                        flex-direction: column
+                        gap: 40px
+                    @include media(540)
+                        gap: 20px
+                        text-align: center
+                    .result-item
+                        h3
+                            font-weight: 400
+                            font-size: 15px
+                            line-height: 20px
+                            color: white
+                            margin-bottom: 15px
+                        span
+                            color: $white
+                            font-weight: 500
+                            font-size: 30px
+                            line-height: 20px
+                .bottom-btn
+                    display: flex
+                    justify-content: space-around
+                    align-items: center
+                    @include media(540)
+                        flex-direction: column
+                    .btn
+                        margin: 30px 0 0 0
+                        @include media(540)
+                            width: 100%
+                        a
+                            padding: 8px 24px
+                            @include media(540)
+                                width: 100%
+                                text-align: center
+                    .custom-btn2
+                        margin: 30px 0 0 0
+                        @include media(540)
+                            width: 100%
+                            margin-top: 0
+                        a
+                            border: 1px solid white
+                            line-height: 20px
+                            border-radius: 5px
+                            padding: 6px 10px
+                            font-size: 14px
+                            line-height: 20px
+                            color: $white
+                            font-weight: 500
+                            &:hover
+                                background: white
+                                color: $primary
+                            @include media(540)
+                                display: flex
+                                justify-content: center
+
+
+.refinance-feasibility-cal
+    padding: 70px 0
+    @include media(540)
+        padding: 50px 0
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 30px
+        @include media(768)
+            flex-direction: column
+        .flex-box-item:first-child
+            background: #F3F3F3
+            width: 58%
+            border-radius: 10px
+            @include media(768)
+                width: 100%
+            .form-section
+                .form-tab-nav
+                    border-bottom: 1px solid #0BB5BD
+                    ul
+                        padding: 15px 25px
+                        list-style-type: none
+                        display: flex
+                        justify-content: start
+                        gap: 60px
+                        li
+                            font-weight: 500
+                            cursor: pointer
+                            font-size: 16px
+                            color: $text
+                            position: relative
+                            transition: 0.3s ease
+                            &::before
+                                content: ''
+                                position: absolute
+                                top: 160%
+                                left: 50%
+                                transform: translate(-50%, -50%)
+                                width: 13px
+                                height: 13px
+                                border-radius: 50%
+                                background: $white
+                                border:1px solid #50A6AA
+                                transition: 0.3s ease
+                        .active
+                            color: #0BA1A7
+                            &::before
+                                background: #0BB5BD 
+                .form-tab-content
+                    .input-form
+                        margin-top: 20px
+                        padding: 20px 20px
+
+                        h2
+                            font-weight: 500
+                            font-size: 20px 
+                            line-height: 20px
+                            color: $black
+                            padding-bottom: 20px
+                        .form-group
+                            margin-bottom: 15px
+                            display: flex
+                            justify-content: start
+                            align-items: center
+                            @include media(540)
+                                flex-direction: column
+                                align-items: unset
+                                gap: 10px
+                            .options 
+                                display: flex
+                                input[type="radio"]
+                                    display: none
+                                input[type="radio"]:checked + label 
+                                    background-color: #0BA1A7
+                                    color: #fff
+                                label 
+                                    display: inline-block
+                                    padding: 10px 20px
+                                    margin-right: 10px
+                                    transition: all 0.3s ease
+                                    border: none
+                                    border-radius: 5px
+                                    cursor: pointer
+                                    transition: 0.3s ease
+                                    color: #666666
+                                    background: white
+                                    width: fit-content
+                            .twonsbdfg
+                                @include media(540)
+                                    flex-direction: column
+                                    gap: 10px
+                                label
+                                    @include media(540)
+                                        width: 100%
+                            label
+                                font-weight: 400
+                                color: $black
+                                font-size: 14px
+                                line-height: 20px
+                                width: fit-content
+                                width: 36%
+                                @include media(540)
+                                    width: 100%
+                            input
+                                padding: 8px 8px 8px 20px
+                                border: none
+                                border-radius: 4px
+                                box-sizing: border-box
+                                @include media(540)
+                                    width: 100%
+                            .custom-select
+                                padding: 8px 28px 8px 20px
+                                border: none
+                                border-radius: 4px
+                                box-sizing: border-box
+                                background: white
+                                // width: 55.7%
+                                &::before
+                                    right: 25px
+                                span
+                                    color: $text
+                        .form-group:last-child
+                            justify-content: start
+                            padding-top: 20px
+                            .calculate-btn
+                                padding: 20px 10px
+                                border-radius: 25px
+                                padding: 10px 26px
+
+                                font-weight: 500
+                                font-size: 15px
+                                background: var(--gradient-a)
+                                color: $white
+                                margin-right: 15px
+                                @include media(540)
+                                    margin-right: 0
+                            .reset-btn
+                                padding: 20px 10px
+                                border-radius: 25px
+                                padding: 10px 26px
+
+                                font-weight: 500
+                                font-size: 15px
+                                background: #C2FBFE 
+                                color: $black
+                        .first-group
+                            display: flex  
+                            justify-content: start
+                            gap: 40px
+                            align-items: center
+                            @include media(540)
+                                flex-direction: column
+                                text-align: unset
+                                gap: 0
+                            .form-group
+                                flex-direction: column
+                                width: fit-content
+                                justify-content: start
+                                align-items: flex-start
+                                padding-top: 0 
+                                @include media(540)
+                                    width: 100%
+                                label
+                                    font-weight: 400
+                                    color: $black
+                                    font-size: 14px
+                                    line-height: 20px
+                                    width: 100%
+                                    padding-bottom: 10px
+                            
+        .flex-box-item:last-child
+            border-radius: 10px
+            width: 40%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            gap: 20px
+            @include media(768)
+                width: 100%
+            .flex-box-item-2:nth-child(1)
+                width: 100%
+                border-radius: 10px
+                border: 1px solid #D0D0D0
+                display: flex
+                flex-direction: column
+                height: fit-content
+                form
+                    padding: 20px 0px 35px 20px
+                    @include media(540)
+                        padding: 30px 0
+                    h2
+                        font-weight: 500
+                        color: black
+                        font-size: 20px
+                        line-height: 20px
+                        border-bottom: 1px solid #FFFFFF85
+                        padding:0 0 20px 0
+                        text-align: center
+                    .one
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        padding: 0 20px
+                        gap: 20px
+                        span
+                            color: black
+                            font-weight: 500
+                            font-size: 30px
+                            line-height: 20px
+                            @include media(540)
+                                font-size: 25px
+                        .custom-select
+                            padding: 8px 38px 8px 20px
+                            border: none
+                            border-radius: 4px
+                            box-sizing: border-box
+                            background: white
+                            width: fit-content
+                            border: 1px solid #666666
+                            width: 100%
+                            height: 100%
+                            &::before
+                                right: 25px
+                            span
+                                color: $text
+                                font-size: 14px
+            .flex-box-item-2:nth-child(2)
+                .results-section
+                    display: flex
+                    justify-content: space-around
+                    .result-item
+                        text-align: center
+                        span
+                            font-weight: 500
+                            font-size: 25px
+                            line-height: 20px
+                            color: black
+                        h3
+                            font-weight: 500
+                            font-size: 12px
+                            line-height: 20px
+                            color: $text
+                            margin: 10px 0
+
+                .bottom-btn
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    margin-top: 30px
+                    .calculate-btn
+                        padding: 20px 10px
+                        border-radius: 25px
+                        padding: 10px 26px
+
+                        font-weight: 500
+                        font-size: 15px
+                        background: var(--gradient-a)
+                        color: $white
+                    
+                    .custom-btn2
+                        margin: 20px 0 0 0
+                        a
+                            padding: 4px 
+                            font-size: 14px
+                            color: $text
+                            font-weight: 500
+                            border-bottom: 1px solid $text
+                            &:hover
+                                background: white
+                                color: $primary
+            .flex-box-item-2:nth-child(3)
+                background: var(--gradient-a)
+                padding: 20px
+                border-radius: 10px
+                display: flex
+                justify-content: space-between
+                flex-direction: inherit
+                h3
+                    color: white
+                    font-weight: 500
+                    font-size: 15px
+                    line-height: 20px
+                .top
+                    display: flex
+                    justify-content: space-between                    
+                    .result-item
+                        text-align: right
+                        margin-bottom: 30px
+                        span
+                            font-weight: 500
+                            font-size: 30px
+                            line-height: 20px
+                            color: white
+                        h4
+                            font-weight: 400
+                            font-style: Regular
+                            font-size: 12px
+                            line-height: 20px
+                            text-align: right
+                            color: $white
+                            margin-top: 10px
+                .bottom
+                    display: flex
+                    justify-content: end
+                    gap: 20px
+                    .result-item
+                        text-align: right
+                        span
+                            font-weight: 500
+                            font-size: 16px
+                            line-height: 20px
+                            color: white
+                        h4
+                            font-weight: 400
+                            font-style: Regular
+                            font-size: 12px
+                            line-height: 20px
+                            text-align: right
+                            color: $white
+                            margin-top: 10px
+// Form all Calculator=======================================
+.note
+    padding-top: 20px
+    p
+        font-size: 15px
+        font-weight: 500
+        @include media(540)
+            font-weight: normal
+.highcharts-legend
+    display: none

@@ -21,9 +21,10 @@
         left: 0
         width: 100%
         height: 100%
-        background: linear-gradient(360deg, rgba(0, 0, 0, 0) 50.48%, rgba(0, 0, 0, 0.98) 100%),linear-gradient(180deg, rgba(0, 0, 0, 0) 45.79%, rgba(0, 0, 0, 0.95) 100%)
-    .video-background 
-        video 
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0) 26.44%, rgba(0, 0, 0, 0.85) 100%),linear-gradient(180deg, rgba(0, 0, 0, 0) 43.27%, rgba(0, 0, 0, 0.65) 100%)
+
+    .img-bg 
+        img 
             position: absolute
             top: 0
             left: 0
@@ -45,21 +46,27 @@
             text-align: center
             margin-bottom: 18px
             max-width: 500px
-            line-height: 1.1
+            line-height: 1.5
             margin: auto
             @include media(991)
                 font-size: 43px
                 line-height: 34px
+            @include media(768)
+                line-height: 54px
             @include media(540)
                 font-size: 40px
                 margin-bottom: 7px
                 line-height: 1.1
         p
             font-family: $Poppins
-            font-weight: 500
+            font-weight: 400
             font-size: 16px
             line-height: 100%
             color: $white
+            max-width: 360px 
+            margin: auto
+            line-height: 1.5
+
             @include media(540)
                 font-size: 14px
                 margin: auto
@@ -77,564 +84,182 @@
             text-align: center
             text-transform: uppercase
 
-.banner-strip
-    background: #F2F2F2
-    padding: 25px
-    .counter-flex
-        width: 100%
-        display: flex
-        justify-content: center 
-        align-items: center
-        gap: 70px
-        @include media(991)
-            align-items: unset
-        @include media(768)
-            align-items: unset
-            justify-content: center
-            gap: 45px
-        @include media(540)
-            align-items: unset
-            justify-content: space-around
-            gap: 0
-        .counter-item
-            @include media(540)
-                text-align: center
-            h5
-                font-weight: 500
-                font-size: 20px
-                @include media(540)
-                    margin-bottom: 4px
-            p   
-                font-weight: 500
-                font-size: 14px
-                line-height: 25px
-                color: $text
-
-                @include media(991)
-                    font-size: 10px
-                    line-height: 1.3
-                    justify-content: space-between
-                @include media(540)
-                    font-size: 10px
-                    line-height: 1.3
-
 .about-secA
-    padding: 100px 0 0 0
-    position: relative
+    padding: 50px 0
     overflow: hidden
-    @include media(768)
-        padding: 60px 0 90px 0 
-    h2
-        margin: 0 0 30px 0
-        font-weight: 700
-        font-size: 48px
-        line-height: 45px
-        span:nth-child(1)
-            color: $primary
-        span:nth-child(2)
-            color: #666666
-        span:nth-child(3)
-            color: $black
-        @include media(540)
-            font-size: 34px 
-            line-height: 1.1 
-            text-align: center 
-            margin-bottom: 20px
     .flex-box
-        display: flex   
-        justify-content: space-between
-        // align-items: center
-        gap: 40px
-        @include media(768)
-            flex-direction: column
-            gap: 0px
+        display: flex
+        justify-content: space-around
+        align-items: center
         @include media(540)
             flex-direction: column
-            gap: 0px
+            gap: 20px
         .flex-box-item:first-child
-            width: 47%
-            @include media(768)
-                width: 100%
-            ul 
-                border-left: 1px solid #5393C5
-                padding-left: 46px
-                margin-left: 20px
-                padding-top: 10px
-                @include media(540)
-                    padding-left: 35px
-                li:last-child   
-                    padding: 0 0 100px 0
-                    margin: 0
-                    @include media(768)
-                        padding: 0 0 50px 0
-                li
-                    font-family: Poppins
-                    font-weight: 400
-                    font-size: 16px
-                    line-height: 24px
-                    color: $text
-                    text-align: justify
-                    position: relative
-                    margin: 0 0 20px 0
-
-                    @include media(991)
-                        font-size: 14px
-                        margin: 0 0 17px 0
-                        text-align: left
-                    &::before
-                        content: ""
-                        position: absolute
-                        top: 4px
-                        left: -54px
-                        width: 16px
-                        aspect-ratio: 1
-                        border-radius: 50%
-                        background: $white
-                        border: 4px solid var(--primary)
-                        @include media(540)
-                            left: -44px
+            width: 25%
+            @include media(540)
+                width: 130px
         .flex-box-item:last-child
-            .video-sec
-                position: relative
-                figure
-                    width: 500px
-                    height: 415px
-                    border-top-left-radius: 50px
-                    line-height: 0
-                    @include media(768)
-                        width: 100%
-                        height: 100%
-                    video
-                        transform: translate(-10%,0%)
-                        border-top-left-radius: 50px
-                        @include media(1024)
-                            transform: translate(-4%, 5%)
-                        @include media(768)
-                            transform: translate(0%, 0%)
-                    .play-button
-                        position: absolute
-                        top: 50%
-                        left: 40%
-                        transform: translate(-50%, -50%)
-                        .play-btn
-                            background: $white
-                            &::after
-                                border-left: calc(var(--btnsize) / 5.6) solid  #1C499B
+            width: 55%
+            @include media(540)
+                width: 100%
+                max-width: 95%
+                margin: auto
+            p
+                margin-bottom: 20px
+                font-size: 16px
+                font-weight: 400
+                @include media(540)
+                    font-size: 14px
+                    text-align: center
+            p:last-child
+                margin-bottom: 0
+                    
 
-                .bg
-                    position: absolute
-                    background: #5393C5
-                    width: 500px
-                    height: 415px
-                    top: 10%
-                    left: 0
-                    z-index: -1
-                    @include media(768)
-                        width: 100%
-                        height: 100%
-                        left: 5%
-                video
-                    width: 100%
-                    height: 100%
-                    object-fit: cover
-                    line-height: 0
 
 .about-secB
-    background: #03052E
-    .bg
-        background-image: url(../../../assets/images/about/vision-mission.jpg)
-        background-repeat: no-repeat
-        background-size: cover
-        height: 100vh
-        mix-blend-mode: plus-lighter
-        position: relative
-        @include media(768)
-            height: 60vh
-        figcaption
-            position: absolute
-            top: 50%
-            left: 20%
-            transform: translate(-50%, -50%)
-            @include media(768)
-                left: 50%
-        .container
-            height: 100%
-            position: relative
-            max-width: 1180px
-            @include media(768)
-                height: 60vh
-            .tab-section
-                position: absolute
-                left: 0
-                top: 50%
-                transform: translateY(-50%)
-                max-width: 50%
-                @include media(1024)
-                    left: 5%
-                @include media(768)
-                    width: 100%
-                    max-width: 90%
-                    margin: auto
-                    height: fit-content
-                    top: 50%
-                    left: 50%
-                    transform: translate(-50%,-50%)
-                .tab-nav
-                    display: flex
-                    justify-content: start
-                    gap: 50px
-                    @include media(768)
-                        justify-content: center
-                    li
-                        position: relative
-                        &::before
-                            content: ""
-                            position: absolute
-                            left: 0
-                            bottom: 0
-                            width: 0%
-                            height: 2px
-                            background-color: #5393C5
-                        a
-                            color: $white
-                            font-weight: 600
-                            font-size: 36px
-                            @include media(768)
-                                font-size: 30px
-                        &.active
-                            position: relative
-                            &::before
-                                content: ""
-                                position: absolute
-                                width: 100%
-                                height: 2px
-                                background-color: #5393C5 
-                                transition: 0.5s ease
-                            a
-                                color: #5393C5
-                .tab-nav-content
-                    padding: 50px 0
-                    @include media(768)
-                        padding: 20px 0
-                        max-width: 60%
-                        margin: auto
-                    @include media(540)
-                        padding: 20px 0
-                        max-width: 100%
-                        margin: auto
-                    p
-                        font-weight: 400
-                        font-size: 18px
-                        line-height: 1.5
-                        margin-bottom: 20px
-                        color: #FFFFFFB2
-                        opacity: 0
-                        transition: 0.5s ease
-                        @include media(768)
-                            font-size: 16px
-                            text-align: center
-                    .active p
-                        opacity: 1
-
-.about-secC
-    height: 80vh
-    width: 100%
-    display: flex
-    flex-wrap: wrap
-    background-size: cover
-    background-position: center
-    transition: background 0.5s ease-in-out
-    position: relative
-    background-image: url('../../../assets/images/about/core-value/1.jpg')
-    @include media(540)
-        height: 100vh
-    &:before
-        content: ""
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
-        z-index: 0
-        pointer-events: none
-        -webkit-user-select: none
-        -moz-user-select: none
-        user-select: none
-        background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%)
-    .heading
-        position: absolute
-        top: 15%
-        left: 50%
-        transform: translate(-50%, -50%)
-        z-index: 2
-        @include media(991)
-            top: 60%
-        @include media(540)
-            top: 15%
-        @include media(540)
-            display: none
-        h2
-            font-weight: 600
-            font-size: 48px
-            text-align: center
-            color: #FFFFFF
-            @include media(1024)
-                font-size: 35px
-            @include media(991)
-                font-size: 40px
-    .property-column
-        flex: 1 1 33%
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        text-align: center
-        color: white
-        font-size: 24px
-        font-weight: bold
-        cursor: pointer
-        position: relative
-        transition: transform 0.6s ease-in-out, background 0.6s ease-in-out
-        padding: 20px
-        overflow: hidden
-        &:before
-            content: ""
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            backdrop-filter: blur(20px)
-            -webkit-backdrop-filter: blur(15px)
-            display: flex
-            align-items: center
-            justify-content: center
-            z-index: 1
-            opacity: 0
-            transition: opacity 0.6s ease-in-out
-        &:nth-child(2)
-            border-left: 1px solid rgba(255, 255, 255, 0.29)
-            border-right: 1px solid rgba(255, 255, 255, 0.29)
-            @include media(540)
-                border-top: 1px solid rgba(255, 255, 255, 0.29)
-        @include media(768)
-            flex: 1 1 50%
-            min-height: 250px
-        @include media(540)
-            flex: 1 1 100%
-            min-height: 200px
-        &:nth-child(3)
-            @include media(991)
-                border-top: 1px solid rgba(255, 255, 255, 0.29)
-        h3
-            transform: translateY(65%)
-            margin-bottom: 10px
-            z-index: 2
-            transition: transform 0.6s ease, left 0.6s ease
-            font-weight: 600
-            font-size: 24px
-            text-align: center
-            color: $white
-        p
-            font-weight: 400
-            font-size: 16px
-            color: $white
-        .property-content
-            opacity: 0
-            transform: translateY(20px)
-            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out
-            z-index: 2
-            color: white
-        img
-            opacity: 0
-            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out
-            z-index: 2
-        &:hover
-            &::before
-                opacity: 1
-                transition: opacity 1s ease-in-out
-            .property-content
-                opacity: 1
-                transform: translateY(0)
-            img
-                opacity: 1
-                transform: translateY(-20px)
-                transition: opacity 1.5s ease-in-out
-                @include media(991)
-                    transform: translateY(-10px)
-                    width: 50px
-            h3
-                transform: translateY(0%) !important
-                @include media(991)
-                    transform: translateY(50px)
-
-.about-secD
+    overflow: hidden
+    padding: 50px 0
     position: relative
     overflow: hidden
-    padding: 100px 0 80px 0
-    @include media(540)
-        padding: 50px 0
-    
-    .Leadership-Team-slider
-        width: 100%
+    background: var(--gradient-a)
+    .heading
+        h2
+            color: white
+    .flex-box
+        padding: 50px 0 0 0
+        display: flex
+        justify-content: center
+        gap: 70px
+        align-items: flex-start
+        @include media(768)
+            flex-direction: column
         @include media(540)
-            margin-bottom: 0px
-            margin-top: 0
-        .heading
+            padding: 30px 0 0 0
+            gap: 0
+        .flex-box-item:first-child
+            .bg-video
+                width: 437px
+                height: 314px
+                border-radius: 10px
+                overflow: hidden
+                line-height: 0
+                position: relative
+                @include media(769)
+                    width: 100%
+                    height: auto
+                .play-button
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    z-index: 1
+                    .play-btn
+                        background: white
+                        &::after
+                            border-left: calc(var(--btnsize) / 5.6) solid $primary
+
+                video
+                    height: 100%
+                    width: 100%
+                    object-fit: cover
+        .flex-box-item:last-child
+            width: 45%
+            border-left: 1px solid white
+            @include media(768)
+                width: 90%
+                margin: auto
+            .summery-detail-content
+                padding: 40px 0
+                .col
+                    position: relative
+                    .title
+                        display: flex
+                        overflow: hidden
+                        align-items: center
+                        padding: 10px 20px 10px 0
+                        margin-left: -21px
+                        gap: 20px
+                        cursor: pointer
+                        transition: 0.5s ease
+                        @include media(540)
+                            padding: 10px 0px 10px 0
+                        h6
+                            color: white
+                            font-weight: 500
+                            font-size: 16px
+                            margin-bottom: 10px
+                        .outer-circle
+                            border: 1px solid white
+                            border-radius: 50%
+                            padding: 10px
+                            transition: 0.5s ease
+                            background: #067278
+                            .ico
+                                flex: 0 1 auto
+                                --size: 18px
+                                --border: 2px
+                                --bgcolor: var(--black)
+                                height: var(--size)
+                                width: var(--size)
+                                position: relative
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    top: calc(var(--size) / 2 - var(--border) / 2)
+                                    bottom: auto
+                                    height: var(--border)
+                                    width: 100%
+                                    transition: 0.5s ease
+                                    pointer-events: none
+                                    background: white
+                                &::after
+                                    content: ""
+                                    position: absolute
+                                    top: calc(var(--size) / 2 - var(--border) / 2)
+                                    bottom: auto
+                                    height: var(--border)
+                                    width: 100%
+                                    transform: rotate(90deg)
+                                    transition: 0.5s ease
+                                    pointer-events: none
+                                    background: white
+                    .website-content
+                        margin-left: 40px
+                        p
+                            color: white
+                            font-size: 14px
+                            font-weight: 400
+                            line-height: 20px
+                .active
+                    .ico
+                        &::after
+                            transform: rotate(0deg) !important
+
+.about-secC
+    padding: 70px 0
+    overflow: hidden
+    .flex-box
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 80px
+        @include media(540)
+            flex-direction: column
+            gap: 20px
+        .flex-box-item:last-child
             text-align: center
-            position: relative
             h2
-                font-weight: 300
-                font-size: 48px
+                font-weight: 700
+                font-style: Bold
+                font-size: 36px
             p
-                font-family: Poppins
-                font-weight: 500
                 font-size: 16px
-                line-height: 16px
-                text-align: center
-            .swiper-nav
-                position: absolute
-                right: 0
-                bottom: 0
-                z-index: 2
+                font-weight: 400
+                max-width: 488px
+                margin: 10px 0 30px 
                 @include media(540)
-                    display: none
-            .swiper-nav
-                .swiper-prev,.swiper-next
-                    border: 1px solid $primary
-                    svg path
-                        stroke: $primary
-                    &:hover
-                        svg path
-                            stroke: $secondary
-                            
-.about-secE
-    padding: 0 0 20px 0
-    @include media(540)
-        padding: 20px 0 60px 0px
-    .heading
-        text-align: center
-        position: relative
-        h2
-            font-weight: 300
-            font-size: 48px
-
-        p
-            font-family: Poppins
-            font-weight: 500
-            font-size: 16px
-            line-height: 16px
-            text-align: center
-        .swiper-nav
-            position: absolute
-            right: 0
-            bottom: 0
-            z-index: 2
-            @include media(540)
-                display: none
-        .swiper-nav
-            .swiper-prev,.swiper-next
-                border: 1px solid $primary
-                svg path
-                    stroke: $primary
-                &:hover
-                    svg path
-                        stroke: $secondary
-    .swiper-slide
-        a
-            .desc
-                display: none
-    .about-slider1
-        padding: 50px 0 0px 0
-        @include media(540)
-            padding: 30px 0 0px 0
-        .swiper-wrapper
-            .swiper-slide
-                a
-                    figure
-                        background: #D2EBFF
-                        border-radius: 10px
-                        padding: 20px 20px 0 20px
-                        line-height: 0
-                        position: relative
-                        overflow: hidden
-                        img
-                            transition: 0.5s ease
-                    figcaption
-                        padding: 10px 
-                        text-align: center
-                        h5
-                            font-weight: 600
-                            font-size: 18px
-                            color: black
-                            margin-bottom: 4px
-                        p
-                            font-weight: 400
-                            font-size: 16px
-                    &:hover
-                        figure img
-                            transform: scale(1.1)
-
-.about-secF
-    padding: 70px 0 
-    @include media(540)
-        padding: 0px 0 70px 0px
-    .heading
-        text-align: center
-        position: relative
-        h2
-            font-weight: 300
-            font-size: 48px
-
-        p
-            font-family: Poppins
-            font-weight: 500
-            font-size: 16px
-            line-height: 16px
-            text-align: center
-        .swiper-nav
-            position: absolute
-            right: 0
-            bottom: 0
-            z-index: 2
-            @include media(540)
-                display: none
-        .swiper-nav
-            .swiper-prev,.swiper-next
-                border: 1px solid $primary
-                svg path
-                    stroke: $primary
-                &:hover
-                    svg path
-                        stroke: $secondary
-    .about-slider2
-        padding: 50px 0 0px 0
-        @include media(540)
-            padding: 30px 0 0px 0
-        .swiper-wrapper
-            .swiper-slide
-                a
-                    figure
-                        background: #F4F4F4
-                        border-radius: 10px
-                        padding: 20px 20px 0 20px
-                        line-height: 0
-                        position: relative
-                        overflow: hidden
-                        img
-                            transition: 0.5s ease
-                    figcaption
-                        padding: 10px 
-                        text-align: center
-                        h5
-                            font-weight: 600
-                            font-size: 18px
-                            color: black
-                            margin-bottom: 4px
-                        p
-                            font-weight: 400
-                            font-size: 16px
-                    &:hover
-                        figure img
-                            transform: scale(1.1)
-        
+                    font-size: 14px
+            span
+                font-size: The Yoshi
+                font-size: 20px
+                font-weight: 400

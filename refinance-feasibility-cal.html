@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasuki Finance</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="/assets/font/font.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+        integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ================= Favicon  ================= -->
+    <link rel="icon" href="assets/icon/favicon/favicon.ico" type="image/x-icon" />
+
+    <!-- ================= Custom CSS ================= -->
+    <link rel="stylesheet" href="assets/sass/calculator/calculator.css">
+    <link rel="stylesheet" href="assets/sass/header/header.css">
+
+    <!-- ================= Animate CSS ================= -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!-- ================= Fucntion JS FILE ================= -->
+    <script type="text/javascript" src="assets/js/function.js"></script>
+
+    <style>
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #printSection,
+            #printSection * {
+                visibility: visible;
+            }
+
+            #printSection {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="home-page">
+
+    <!-- ================= HEADER START ================= -->
+    <header>
+        <div class="container-fluid">
+            <div class="header-wrapper">
+                <div class="colA">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.svg" alt="KrayMan" title="KrayMan" />
+                    </a>
+                </div>
+                <div class="colB">
+                    <ul class="menu-list">
+                        <li class="hasDropdown single">
+                            <a aria-haspopup="true" aria-expanded="false" href="javascript:void(0);">
+                                Services
+                                <span><img class="svg" width="16" src="assets/icon/arrow-down-white.svg"
+                                        alt="" /></span>
+                            </a>
+                            <div class="dropdown-menu" role="menu">
+                                <ul>
+                                    <li><a href="service.html">Property Finance</a></li>
+                                    <li><a href="service.html">Asset Finance</a></li>
+                                    <li><a href="service.html">Refinancing</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="hasDropdown single">
+                            <a aria-haspopup="true" aria-expanded="false" href="javascript:void(0);">
+                                Calculators
+                                <span><img class="svg" width="16" src="assets/icon/arrow-down-white.svg"
+                                        alt="" /></span>
+                            </a>
+                            <div class="dropdown-menu" role="menu">
+                                <ul>
+                                    <li><a href="loan-repayment-cal.html" target="_blank">Loan Repayment Calculator</a>
+                                    </li>
+                                    <li><a href="stamp-duty-cal.html" target="_blank">Stamp Duty Calculator</a></li>
+                                    <li><a href="lump-sum-repayment-cal.html" target="_blank">Lump Sum Repayment
+                                            Calculator</a></li>
+                                    <li><a href="extra-repayment-cal.html" target="_blank">Extra Repayment
+                                            Calculator</a></li>
+                                    <li><a href="home-loan-offset-cal.html" target="_blank">Home Loan Offset
+                                            Calculator</a></li>
+                                    <li><a href="borrowing-capacity-cal.html" target="_blank">Borrowing Capacity
+                                            Calculator</a></li>
+                                    <li><a href="refinance-feasibility-cal.html" target="_blank">Refinance Feasibility
+                                            Calculator</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ’s</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+
+                    <ul class="right-menu-list">
+                        <li>
+                            <a href="tel:+61470239970">
+                                <img src="assets/icon/phone-white-icon.svg" alt="">
+                                <div class="no">
+                                    <p>Call or Whatsapp</p>
+                                    <p>+61 470 239 970</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="btn2">
+                            <a href="javascript:void(0);" data-model=".enquire-pop">Enquire Now</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <button type="button" class="ham-btn" data-model=".ham-pop">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- ================= HEADER END ================= -->
+
+    <main>
+        <section>
+            <div class="calculator-banner">
+                <div class="video-background">
+                    <video autoplay muted loop playsinline class="bg-video" src="/assets/video/calculator-banner.mp4">
+                        <source type="video/mp4">
+                    </video>
+
+                    <div class="bg-wrapper">
+                        <h1 data-animate="fade-up">Refinance Feasibility Calculator</h1>
+                    </div>
+                </div>
+                <button type="button" class="scroll-btn" data-scrollto=".contact-secA">
+                    <img src="assets/icon/scrolldown.svg" alt="" />
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <div class="refinance-feasibility-cal">
+                <div class="container">
+                    <div class="flex-box" id="printSection">
+
+                        <div class="flex-box-item">
+
+                            <div class="form-section">
+
+
+                                <div class="form-tab-content" data-tab="act">
+                                    <form action="" class="input-form">
+                                        <h2>My Loan Details</h2>
+
+                                        <div class="first-group">
+                                            <div class="form-group">
+                                                <label for="">Current Loan Balance</label>
+                                                <input type="number" id="loan-amount" min="0" placeholder="$500,000">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="">Interest Rate %</label>
+                                                <input type="number" id="loan-amount" min="0" placeholder="6.5%">
+                                            </div>
+                                        </div>
+                                        <div class="first-group">
+                                            <div class="form-group">
+                                                <label for="">Remaining Years</label>
+                                                <input type="number" id="loan-amount" min="0" placeholder="30 years">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="">Offset Account Balance</label>
+                                                <input type="number" id="loan-amount" min="0" placeholder="$0">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group" data-show="my-details">
+                                            <label for="loan-amount">Property Type</label>
+                                            <div class="options">
+                                                <input type="radio" id="owner-occupied" name="propertyTypeDetails"
+                                                    value="for-me" checked>
+                                                <label for="owner-occupied">Owner Occupied</label>
+
+                                                <input type="radio" id="investment-details" name="propertyTypeDetails"
+                                                    value="for-us">
+                                                <label for="investment-details">Investment</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group" data-show="my-details">
+                                            <label for="loan-amount">Repayment Type</label>
+                                            <div class="options twonsbdfg">
+                                                <input type="radio" id="principal-interest" name="repaymentType"
+                                                    value="principal-interest" checked>
+                                                <label for="principal-interest">Principal + Interest</label>
+
+                                                <input type="radio" id="interest-only" name="repaymentType"
+                                                    value="interest-only">
+                                                <label for="interest-only">Interest Only</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for=""></label>
+                                            <button class="calculate-btn">Calculate</button>
+                                            <button class="reset-btn">Reset</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-box-item">
+                            <div class="flex-box-item-2">
+                                <form action="">
+                                    <h2>New Refinance Payments</h2>
+
+                                    <div class="one">
+                                        <div class="form-group">
+                                            <span>$2,820.15</span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <select id="dependent-children">
+                                                <option value="monthly">Per Monthly</option>
+                                                <option value="yearly">Per Yearly</option>
+                                                <option value="fortnightly">Per Fortnightly</option>
+                                                <option value="weekly">Per Weekly</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="flex-box-item-2">
+                                <div class="results-section">
+                                    <div class="result-item">
+                                        <span>5.49%</span>
+                                        <h3>COMPARISON RATE</h3>
+                                    </div>
+
+                                    <div class="result-item">
+                                        <span>5.44%</span>
+                                        <h3>INTEREST RATE</h3>
+                                    </div>
+                                </div>
+
+                                <div class="bottom-btn">
+                                    <div class="btnnn">
+                                        <a href="javascript:void(0);" class="calculate-btn"
+                                            data-model=".enquire-pop">Book an Appointment </a>
+                                    </div>
+                                    <div class="custom-btn2">
+                                        <a href="javascript:void(0);">Assumptions & Disclaimer</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-box-item-2">
+                                <div class="top">
+                                    <h3>Savings Breakdown</h3>
+
+                                    <div class="result-item">
+                                        <span>$26,182</span>
+                                        <h4>LIFETIME</h4>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="result-item">
+                                        <span>$1,093</span>
+                                        <h4>EVERY YEAR</h4>
+                                    </div>
+                                    <div class="result-item">
+                                        <span>$91</span>
+                                        <h4>EVERY MONTH</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER START ================= -->
+    <div class="footer-strip">
+    </div>
+    <footer>
+        <div class="footer-bg-logo">
+            <img src="assets/images/footer-bg.png" alt="footer-bg-logo">
+        </div>
+        <div class="bottom-sec">
+            <div class="container">
+                <div class="grid-box">
+                    <div class="grid-box-item">
+                        <img src="assets/images/footer-logo.svg" alt="null" />
+                    </div>
+
+                    <div class="grid-box-item">
+                        <div class="col-mdA">
+                            <h6>Services</h6>
+                            <ul>
+                                <li><a href="">Property Finance</a></li>
+                                <li><a href="">Asset Finance </a></li>
+                                <li><a href="">Refinancing</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-mdB">
+                            <h6>Quick Links</h6>
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="blog.html">Blogs</a></li>
+                                <li><a href="faq.html">FAQ’s</a></li>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grid-box-item">
+                        <h6>Head Office</h6>
+
+                        <div class="location">
+                            <div class="one">
+                                <img src="assets/icon/location-white.svg" alt="location" />
+                                <p>12 Example Street Sydney NSW 2000 AUSTRALIA</p>
+                            </div>
+                            <div class="two">
+                                <img src="assets/icon/phone-white.svg" alt="call" />
+                                <a href="tel:+91-0000000000">+61 470 239 970</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-box-item">
+                        <div class="social-icon">
+                            <a href="javascript:void(0);">
+                                <img class="svg" src="assets/icon/twitter-white.svg" alt="">
+                            </a>
+                            <a href="javascript:void(0);">
+                                <img class="svg" src="assets/icon/facebook-white.svg" alt="">
+                            </a>
+                            <a href="javascript:void(0);">
+                                <img class="svg" src="assets/icon/instagram-white.svg" alt="">
+                            </a>
+                            <a href="javascript:void(0);">
+                                <img class="svg" src="assets/icon/linkedin-white.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="btn">
+                            <a href="javascript:void(0);">Calculators</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-footer">
+            <div class="content flex">
+                <p>&copy; Vasuki Finance All rights reserved.
+                    <span>&nbsp; | &nbsp;</span>
+                <div class="footer-link">
+                    <p>Made by passion</p>
+                    <img src="assets/icon/prettify.svg" alt="prettifycreative">
+                </div>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- ================= FOOTER END ================= -->
+
+    <div class="overlay"></div>
+    <div class="footer-strip">
+        <ul>
+            <li>
+                <a href="tel:+919818937799">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.08334 7.26667C4.94871 11.3275 8.26304 14.5457 12.3771 16.2906L12.3896 16.2958L13.1854 16.65C13.677 16.8692 14.229 16.9126 14.7488 16.7728C15.2685 16.633 15.7243 16.3185 16.0396 15.8823L17.3667 14.0458C17.4057 13.9917 17.4225 13.9248 17.4135 13.8587C17.4046 13.7926 17.3707 13.7324 17.3188 13.6906L15.0021 11.8208C14.9748 11.7988 14.9432 11.7825 14.9094 11.7729C14.8756 11.7634 14.8403 11.7608 14.8054 11.7652C14.7706 11.7697 14.737 11.7812 14.7067 11.799C14.6764 11.8168 14.6501 11.8405 14.6292 11.8687L13.7271 13.0854C13.6208 13.229 13.4686 13.3318 13.2957 13.3767C13.1228 13.4216 12.9398 13.4059 12.7771 13.3323C9.69486 11.936 7.22547 9.46661 5.82917 6.38437C5.75554 6.22166 5.73987 6.03863 5.78479 5.86576C5.82971 5.6929 5.93251 5.54065 6.07605 5.43438L7.29168 4.53125C7.31992 4.51037 7.34365 4.484 7.36144 4.45371C7.37923 4.42342 7.39071 4.38985 7.39518 4.35501C7.39966 4.32018 7.39704 4.28479 7.38749 4.25099C7.37794 4.21719 7.36164 4.18567 7.33959 4.15833L5.47084 1.84167C5.42903 1.78972 5.36888 1.75579 5.30279 1.74688C5.23671 1.73796 5.16972 1.75474 5.11563 1.79375L3.26876 3.12708C2.82959 3.44386 2.51366 3.90294 2.37466 4.42629C2.23565 4.94964 2.28215 5.50497 2.50626 5.99792L3.08334 7.26667ZM11.7604 17.726C7.29074 15.8281 3.69022 12.3305 1.66355 7.91771L1.66147 7.91563L1.08438 6.64479C0.710862 5.82337 0.633246 4.89796 0.864722 4.0258C1.0962 3.15364 1.62249 2.38851 2.35417 1.86042L4.20105 0.527084C4.57931 0.254084 5.04783 0.136485 5.51018 0.198493C5.97253 0.2605 6.39351 0.497397 6.68647 0.860417L8.55626 3.17813C8.71056 3.36935 8.82461 3.58979 8.89156 3.82621C8.95851 4.06262 8.97697 4.31014 8.94583 4.55387C8.9147 4.7976 8.83461 5.03252 8.71038 5.24452C8.58615 5.45652 8.42034 5.64121 8.22293 5.7875L7.52501 6.30417C8.70499 8.59202 10.5684 10.4554 12.8563 11.6354L13.374 10.9375C13.5203 10.7402 13.7049 10.5746 13.9168 10.4504C14.1287 10.3263 14.3635 10.2463 14.6071 10.2151C14.8507 10.184 15.0981 10.2024 15.3344 10.2693C15.5707 10.3361 15.7911 10.45 15.9823 10.6042L18.3 12.474C18.6633 12.7669 18.9004 13.1881 18.9624 13.6507C19.0244 14.1133 18.9067 14.5821 18.6333 14.9604L17.3063 16.7979C16.7809 17.5249 16.0215 18.049 15.1553 18.2821C14.2892 18.5153 13.3693 18.4432 12.55 18.0781L11.7604 17.726Z"
+                            fill="white"></path>
+                    </svg>
+                    Call
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 64 64">
+                        <path fill="#e6e7e8" d="M0 24h64v14H0z" stroke-width="1.5" stroke="#e6e7e8" />
+                        <path fill="#f93" d="M54 9H10C3.373 9 0 13.925 0 20v4h64v-4c0-6.075-3.373-11-10-11"
+                            stroke-width="1.5" stroke="#f93" />
+                        <path fill="#128807" d="M0 42c0 6.075 3.373 11 10 11h44c6.627 0 10-4.925 10-11v-4H0z"
+                            stroke-width="1.5" stroke="#128807" />
+                        <g fill="#010088" fill-rule="evenodd" stroke-width="1.5" stroke="#010088">
+                            <path
+                                d="M32.31 24.583a6.458 6.458 0 1 1-6.458 6.448a6.46 6.46 0 0 1 6.458-6.448m-4.305 2.795c.111.126.131.261.057.374a.26.26 0 0 1-.137.112a.29.29 0 0 1-.267-.034a5.5 5.5 0 0 0-.457.786c.151.099.201.223.151.36a.287.287 0 0 1-.363.168c-.072.144-.231.752-.233.88a.3.3 0 0 1 .168.101a.27.27 0 0 1 .064.188c-.019.188-.135.268-.312.275c-.028.181-.025.787.003.906q.28.03.303.245c.022.154-.052.254-.232.324q.08.446.232.875a.34.34 0 0 1 .215.007c.067.029.12.079.148.148q.037.08.017.169a.29.29 0 0 1-.161.202c.134.278.282.54.457.786c.156-.077.292-.059.384.051a.26.26 0 0 1 .065.164a.28.28 0 0 1-.104.236q.299.35.645.645c.131-.115.267-.133.384-.051q.08.056.107.146a.3.3 0 0 1-.042.252q.379.26.787.454q.16-.224.358-.149a.3.3 0 0 1 .142.107q.073.12.028.262c.288.102.578.18.878.233c.059-.169.161-.248.297-.238c.063.005.12.024.17.067q.105.096.097.245q.46.034.908 0c.022-.193.099-.29.254-.312a.26.26 0 0 1 .17.034a.29.29 0 0 1 .142.204q.453-.083.878-.234c-.025-.189.021-.302.148-.361a.3.3 0 0 1 .147-.023q.079.005.137.054c.037.031.068.069.104.108a5.5 5.5 0 0 0 .782-.451c-.102-.16-.042-.313.041-.381a.287.287 0 0 1 .408.035c.231-.198.448-.413.642-.644c-.113-.129-.135-.265-.052-.382a.26.26 0 0 1 .145-.108a.29.29 0 0 1 .255.039q.262-.377.457-.787q-.22-.147-.155-.344a.27.27 0 0 1 .1-.145a.3.3 0 0 1 .27-.04c.065-.141.227-.735.236-.879a.3.3 0 0 1-.176-.104a.26.26 0 0 1-.061-.198a.27.27 0 0 1 .074-.169a.3.3 0 0 1 .236-.09a5.5 5.5 0 0 0 0-.909c-.191-.019-.282-.093-.307-.244a.26.26 0 0 1 .024-.168a.29.29 0 0 1 .209-.153a5.3 5.3 0 0 0-.233-.878c-.185.031-.299-.019-.36-.147a.284.284 0 0 1 .143-.379a5.3 5.3 0 0 0-.457-.787c-.161.077-.292.059-.384-.051a.26.26 0 0 1-.064-.168a.28.28 0 0 1 .104-.231a6 6 0 0 0-.643-.645c-.138.118-.272.133-.386.051a.26.26 0 0 1-.107-.146a.29.29 0 0 1 .042-.249a5.5 5.5 0 0 0-.787-.457q-.154.22-.35.153a.3.3 0 0 1-.145-.104a.3.3 0 0 1-.034-.269a5 5 0 0 0-.878-.233c-.057.162-.16.246-.293.238a.3.3 0 0 1-.17-.064a.29.29 0 0 1-.101-.248a5.3 5.3 0 0 0-.908.001q-.032.271-.232.305a.27.27 0 0 1-.177-.022a.29.29 0 0 1-.156-.211a5.6 5.6 0 0 0-.879.235c.032.177-.018.293-.14.356q-.079.042-.171.027a.27.27 0 0 1-.213-.163c-.171.064-.715.379-.787.458c.074.148.057.279-.045.373a.287.287 0 0 1-.411-.032a6 6 0 0 0-.643.643" />
+                            <path
+                                d="M35.08 35.827c-.012-.013-.024-.022-.033-.036a869 869 0 0 0-1.749-2.663l-.04-.078c-.136-.317-.269-.634-.408-.95a.2.2 0 0 0-.019-.047c-.056.021-.107.045-.167.068l.02.051c.125.307.245.615.372.922c.034.082.048.168.066.254c.098.459.19.92.289 1.38l.338 1.643a.02.02 0 0 1-.003.024l-.014-.035c-.274-.839-.555-1.677-.83-2.516c-.055-.164-.104-.326-.164-.49c-.028-.082-.037-.166-.05-.251c-.035-.238-.065-.478-.104-.716q-.009-.085-.022-.168l-.011-.068c-.06.006-.115.014-.175.021q0 .036.004.074c.035.293.065.587.107.879c.022.16.011.317.002.477l-.021.406c-.018.274-.032.547-.051.82l-.03.564l-.054.957c-.008.09-.01.182-.019.27l-.024-.303l-.031-.656l-.036-.585q-.016-.3-.034-.599l-.022-.391l-.034-.619a1.4 1.4 0 0 1 .008-.328q.03-.223.055-.449q.029-.223.055-.443l.005-.074l-.175-.023q-.009.06-.021.119l-.128.916c-.012.119-.059.229-.099.34q-.462 1.408-.929 2.814c-.007.017-.01.033-.023.049q-.001-.017.005-.032q.193-.949.393-1.897l.26-1.258l.024-.069c.129-.317.253-.637.385-.954a.3.3 0 0 1 .02-.054l-.166-.069c-.007.018-.018.033-.024.051l-.411.955a.4.4 0 0 1-.032.069a828 828 0 0 0-1.765 2.685a.1.1 0 0 1-.031.035l.02-.043l1.446-2.867a.4.4 0 0 1 .046-.073l.618-.829c.013-.014.021-.027.033-.042c-.051-.037-.092-.071-.143-.11q-.017.019-.03.037q-.324.408-.64.814q-.034.038-.073.074c-.788.705-1.576 1.406-2.367 2.112q-.023.021-.052.036l.02-.027q.972-1.087 1.939-2.174q.056-.06.109-.123q.111-.128.247-.23l.718-.565c.016-.012.028-.025.046-.037l-.11-.141l-.044.031l-.826.617a1 1 0 0 1-.098.061c-.939.474-1.883.948-2.824 1.422c-.018.008-.035.018-.056.018l.038-.027l1.756-1.15q.46-.301.917-.604l.076-.04q.479-.203.953-.407q.022-.008.048-.021l-.067-.165c-.019.005-.031.01-.046.015c-.324.129-.645.26-.971.388c-.067.025-.14.037-.211.052l-2.185.454c-.275.059-.555.117-.831.174a.05.05 0 0 1-.033-.004q.114-.037.227-.076q1.416-.466 2.828-.934c.074-.025.153-.032.228-.044l.908-.129l.055-.012l-.02-.176l-.146.016l-.604.073l-.336.041q-.04.005-.079.003l-.636-.037l-.376-.021l-.648-.038l-.945-.052c-.228-.012-.45-.027-.677-.043c.036-.003.076-.009.115-.009l.775-.044l1.024-.058l.848-.048l.532-.032q.034 0 .067.004l.61.073l.432.052h.044c.005-.057.014-.111.02-.173c-.037-.008-.079-.014-.116-.021q-.4-.056-.799-.115l-.166-.022a.5.5 0 0 1-.09-.021c-.795-.261-1.585-.524-2.379-.785l-.662-.22a.2.2 0 0 1-.053-.025l.139.028l1.697.353c.454.095.915.189 1.369.285l.08.025c.32.126.637.256.96.384l.048.019q.033-.081.07-.165a.4.4 0 0 0-.051-.025q-.477-.202-.952-.408l-.072-.037c-.897-.587-1.79-1.177-2.688-1.765a.06.06 0 0 1-.027-.029l.036.02q1.341.675 2.685 1.349c.148.074.292.163.424.264c.218.169.44.331.662.497l.044.031l.11-.139l-.039-.034l-.813-.639q-.04-.033-.074-.069q-1.063-1.19-2.123-2.38a.1.1 0 0 1-.023-.031c.021.002.029.016.038.025q.642.57 1.28 1.14l1.102.982q.03.029.057.06l.631.802c.016.018.028.037.046.061l.145-.111c-.009-.014-.021-.025-.028-.038q-.308-.413-.619-.825a1 1 0 0 1-.059-.1q-.719-1.42-1.433-2.84c-.009-.018-.018-.032-.02-.051l.024.028l1.022 1.562l.723 1.1c.025.042.053.086.069.132q.201.462.396.925q.012.02.024.047l.166-.069l-.018-.042q-.186-.468-.374-.934c-.035-.079-.048-.161-.065-.243c-.109-.521-.214-1.043-.323-1.565c-.107-.502-.209-1-.314-1.504q-.002-.003.004-.017l.088.267q.471 1.415.933 2.833c.026.074.035.155.046.232q.054.394.116.79c.007.05.01.1.02.155l.174-.022v-.066l-.076-.627c-.015-.122-.026-.241-.043-.36a1 1 0 0 1 0-.241l.023-.406l.049-.815c.009-.146.012-.294.021-.44q.019-.286.034-.574q.013-.21.022-.42q.013-.247.035-.493q.005.067.008.139q.02.301.036.604l.052.916l.031.514l.047.892l.01.131c.013.116-.01.231-.02.346l-.064.524c-.01.099-.025.198-.037.298c-.002.024-.002.05-.009.079c.062.009.118.015.18.023c.009-.043.013-.083.02-.125q.072-.487.14-.977c.004-.024.014-.049.02-.074c.326-.978.646-1.957.97-2.937c.016-.045.028-.088.053-.131l-.011.068c-.146.708-.298 1.414-.443 2.12q-.098.497-.203.994a.3.3 0 0 1-.026.079l-.386.965q-.01.02-.019.047c.06.023.109.046.167.069l.023-.048l.403-.947c.016-.032.028-.063.049-.089l1.745-2.662c.011-.014.02-.028.037-.038q-.009.021-.021.042l-1.435 2.85q-.022.041-.048.078l-.622.829l-.033.045l.142.111l.031-.038q.317-.405.638-.811a.6.6 0 0 1 .079-.084q1.185-1.059 2.372-2.115c.013-.011.022-.022.043-.028l-.026.032q-.483.547-.974 1.091q-.583.652-1.162 1.304q-.032.033-.065.059l-.813.639l-.04.032c.038.048.072.094.112.142l.043-.032l.833-.624l.066-.042q1.438-.722 2.868-1.444q.022-.012.046-.013q-.064.043-.129.084l-2.592 1.701q-.035.022-.072.039c-.319.138-.641.274-.957.411l-.051.02c.027.056.046.109.07.165l.046-.015c.321-.127.64-.26.964-.383c.08-.032.168-.046.255-.064l1.473-.306c.458-.094.912-.19 1.371-.285q.061-.014.125-.026c.011 0 .021-.002.037.004l-.14.046q-1.464.485-2.928.964c-.074.026-.156.033-.233.045l-.648.093l-.233.033l-.057.01c.006.059.015.114.019.178l.151-.016l.54-.064c.135-.017.276-.036.417-.049c.063-.005.127.001.192.004c.137.006.274.018.417.024l.808.048l.364.02l.824.047c.195.012.396.021.59.033a2 2 0 0 1 .144.013l-.146.012l-.605.033l-.749.044l-.565.03c-.26.016-.525.031-.787.048c-.144.006-.292.02-.437.021c-.083.002-.17-.014-.251-.023l-.533-.064l-.341-.041h-.033q-.008.086-.019.176l1.058.153c.104.013.195.054.293.085l2.844.939a.1.1 0 0 1 .051.023q-.035-.006-.071-.01l-2.47-.515l-.652-.136c-.021-.006-.049-.014-.072-.025q-.481-.191-.966-.386l-.043-.015l-.073.163l.053.025q.478.203.953.408q.037.016.076.042l2.662 1.744c.013.01.03.022.041.041q-.021-.01-.039-.021l-1.387-.696q-.727-.368-1.461-.736a.4.4 0 0 1-.087-.057l-.828-.618l-.039-.028c-.038.046-.072.091-.112.139l.038.03c.268.214.541.428.81.641a.5.5 0 0 1 .083.076l2.119 2.371a.1.1 0 0 1 .02.039c-.011-.012-.026-.02-.037-.029Q35 33.869 33.805 32.806a.3.3 0 0 1-.048-.054l-.648-.826q-.014-.019-.031-.038c-.046.038-.091.072-.137.112q.007.019.021.037l.629.838a1 1 0 0 1 .048.077l1.429 2.841a.1.1 0 0 1 .015.042h-.003z" />
+                            <path
+                                d="m35.07 35.827l.024.03c-.005.002-.005.005-.011.006c-.002-.014-.009-.023-.011-.036z" />
+                        </g>
+                    </svg>
+                    English
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 36 36">
+                        <path fill="#eee" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4z"
+                            stroke-width="1" stroke="#eee" />
+                        <circle cx="18" cy="18" r="7" fill="#ed1b2f" stroke-width="1" stroke="#ed1b2f" />
+                    </svg>
+                    Japanese
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- start Video Pop -->
+    <div class="model video-pop">
+        <div class="model-body">
+            <button class="close-video"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.75 0.75L23.25 23.25M0.75 23.25L23.25 0.75" stroke="black" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <iframe id="iframe1" allow="autoplay;fullscreen" src=""></iframe>
+        </div>
+    </div>
+    <!-- End Video Pop -->
+
+    <!--Enquire Pop Start -->
+    <div class="model enquire-pop">
+        <button class="close"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.5 0.5L25.5 25.5M0.5 25.5L25.5 0.5" stroke="black" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg></button>
+        <div class="model-body">
+            <div class="title">
+                <h4>Enquire Now</h4>
+                <!-- <p>Contact us for expert electrical solutions and reliable after-sales service.</p> -->
+            </div>
+            <div class="form form-grid">
+                <div class="form-group">
+                    <input type="text" class="form-control" required>
+                    <label for="">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" required>
+                    <label for="">Phone</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea name="" id="" class="form-control"></textarea>
+                    <label for="">Message</label>
+                </div>
+
+                <div class="bottom-btn btn2">
+                    <button type="button">SUBMIT</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--Enquire Pop End-->
+
+    <!-- Animate JS File -->
+    <script src="assets/js/animate.js"></script>
+
+    <!-- End Enquire Menu -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js"
+        integrity="sha512-771ZvVCYr4EfUGXr63AcX7thw7EKa6QE1fhxi8JG7mPacB/arC0cyvYPXKUkCrX2sYKnnFCZby3ZZik42jOuSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+
+</html>

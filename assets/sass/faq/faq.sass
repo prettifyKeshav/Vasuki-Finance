@@ -1,0 +1,117 @@
+@import '../_var'
+
+.faq-secA
+    margin-top: var(--headerheight)
+    padding: 70px 0
+    @include media(540)
+        padding: 50px 0 
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 100px
+        @include media(1024)
+            gap: 50px
+        @include media(991)
+            flex-direction: column
+            gap: 20px
+
+        .flex-box-item:first-child
+            width: 35%
+            @include media(991)
+                width: 100% 
+            .tab-nav
+                @include media(991)
+                    display: flex
+                    overflow-x: auto
+                    gap: 10px
+                li
+                    color: $black
+                    margin-bottom: 10px
+                    padding:10px  30px
+                    font-weight: 400
+                    font-size: 16px
+                    border-radius: 5px
+                    background: #6666660f
+                    @include media(991)
+                        white-space: nowrap
+                .active
+                    color: $white
+                    position: relative
+                    transition: 0.5s ease
+                    background: #0BB5BD
+        .flex-box-item:last-child
+            width: 100%
+            .tab-nav-content
+                .tabs
+                    opacity: 0
+                    transform: translateY(30%)
+                    transition: 0.5s ease
+
+                    .summery-detail-content
+                        .col
+                            margin-bottom: 15px
+                            .title
+                                padding: 10px 15px
+                                border-radius: 5px
+                                background: #EFEFEF
+                                transition: 0.5s ease
+                                cursor: pointer
+                                .ico
+                                    position: relative
+                                    &::before
+                                        content: ""
+                                        position: absolute
+                                        top: 15px
+                                        right: 0px
+                                        transform: translateX(-50%)
+                                        width: 20px
+                                        height: 2px
+                                        background: black
+                                        transition: 0.5s ease
+                                    &::after
+                                        content: " "
+                                        position: absolute
+                                        top: 15px
+                                        right: 0px
+                                        transform: translateX(-50%) rotate(90deg)
+                                        width: 20px
+                                        height: 2px
+                                        background: black
+                                        transition: 0.5s ease
+                                h6
+                                    color: #666
+                                    transition: 0.5s ease
+                                    padding: 0 40px 0 0
+                                    @include media(768)
+                                        font-size: 16px
+
+                            article
+                                .website-content
+                                    p
+                                        font-weight: 400
+                                        font-size: 14px
+                                        color: $text
+                                        line-height: 24px
+                                        padding-top: 7px
+
+                .active
+                    opacity: 1
+                    transform: translateY(0%)
+                    .summery-detail-content
+                        .active 
+                            .title
+                                background: #DAFDFF
+                                .ico
+                                    position: relative
+                                    &::after
+                                        content: " "
+                                        position: absolute
+                                        top: 15px
+                                        right: 0px
+                                        transform: translateX(-50%) rotate(0deg)
+                                        width: 20px
+                                        height: 2px
+                                        background: black
+                                        transition: 0.5s ease
+                                h6
+                                    color: black

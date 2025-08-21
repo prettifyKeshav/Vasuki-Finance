@@ -22,8 +22,7 @@
         height: 100%
         background: linear-gradient(360deg, rgba(0, 0, 0, 0) 26.44%, rgba(0, 0, 0, 0.85) 100%),linear-gradient(270deg, rgba(0, 0, 0, 0) 43.27%, rgba(0, 0, 0, 0.65) 100%)
         @include media(540)    
-            background: linear-gradient(360deg, rgba(0, 0, 0, 0) 26.44%, rgba(0, 0, 0, 0.85) 100%),linear-gradient(270deg, rgba(0, 0, 0, 0) 43.27%, rgba(0, 0, 0, 0.65) 100%)
-
+            background: linear-gradient(360deg, rgba(0, 0, 0, 0) 26.44%, rgba(0, 0, 0, 0.85) 100%), linear-gradient(177deg, rgba(0, 0, 0, 0) 43.27%, rgba(0, 0, 0, 0.65) 100%)
     .video-background 
         video 
             position: absolute
@@ -47,40 +46,33 @@
                 @include media(991)
                     bottom: 10%
                 @include media(540)
+                    width: 100%
                     bottom: 10%
                     margin-left: 0
-                .play-button
-                    margin-top: 100px
+                .btn
                     display: flex
                     align-items: center
                     gap: 20px
                     @include media(540)
                         display: flex
                         justify-content: center
-                        margin-top: 10px
-                    p
-                        text-transform: uppercase
-                        font-size: 14px
-                        font-weight: 600
+                        padding-top: 20px
+                        margin: auto
                 h1
                     font-weight: 700
-                    font-size: 48px
+                    // font-size: 48px
                     line-height: 1.1
                     text-align: left
                     margin-bottom: 18px
                     max-width: 670px
-
-                    @include media(991)
-                        max-width: 70%
-                        line-height: 1.2
-                        font-size: 40px
+                    @include media(768)
+                        max-width: 540px
                     @include media(540)
-                        max-width: 100%
-                        font-size: 35px
-                        line-height: 1.1
+                        max-width: 90%
                         text-align: center
-                        padding: 0 20px
-                        margin-bottom: 20px
+                        margin: auto
+                        font-size: 25px
+                        line-height: 1.2
 
                 p
                     font-family: $Poppins
@@ -109,6 +101,11 @@
                 justify-content: right
                 position: absolute
                 bottom: 7%
+                display: none
+                @include media(1024)
+                    max-width: 95%
+                @include media(540)
+                    display: none
                 .btn:first-child
                     margin: 0
                     padding: 0
@@ -119,6 +116,8 @@
                         align-items: center
                         border-radius: 50%
                         padding: 13px 
+                        @include media(768)
+                            padding: 9px
                         svg
                             path
                                 fill: $black
@@ -137,33 +136,52 @@
                         border-radius: 50px
                         gap: 10px
                         color: black
+                        @include media(768)
+                            padding: 6px 24px
                         span
                             font-weight: 400
                             font-size: 16px
                             color: black
                         &:hover
                             color: $white
-                            
+          
 .banner-strip
     padding: 20px 0
     position: relative
     overflow: hidden
     background: var(--gradient-a)
+    @include media(768)
+        padding: 40px 0
     .flex-box
         display: flex
         justify-content: space-between
         align-items: center
+        @include media(768)
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            align-items: flex-end
+            gap: 10px
+        @include media(540)
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+            align-items: flex-end
+            gap: 40px
         .flex-box-item
             display: flex
             justify-content: start
             align-items: anchor-center
             max-width: 377px
             gap: 20px
+            @include media(768)
+                display: block
+                text-align: center
             .txt
                 h3
                     font-weight: 700
                     color: $white
                     font-size: 16px
+                    @include media(768)
+                        font-size: 14px
                 p
                     font-weight: 400
                     font-size: 14px
@@ -184,13 +202,38 @@
         text-align: center
         max-width: 60%
         margin: auto
+        @include media(768)
+            max-width: 80%
+        @include media(540)
+            max-width: 100%
+            h2
+                font-size: 25px
+            p
+                max-width: 100%
+                font-size: 14px
+                margin: 10px auto
     .tab-section
         padding: 50px 0
+        @include media(768)
+            padding: 50px 0 20px 0
+        @include media(768)
+            padding: 20px 0
         .tab-nav
             display: flex
             justify-content: center
             align-items: center
             gap: 70px
+            @include media(540)
+                overflow-x: auto
+                gap: 20px
+                li
+                    white-space: nowrap
+                li:first-child
+                    margin-left: 50px
+            @include media(360)
+                li:first-child
+                    margin-left: 90px
+            
             li
                 transition: 0.5s ease
                 position: relative
@@ -200,21 +243,29 @@
                     position: absolute
                     bottom: 0
                     left: 0
-                    width: 0%
+                    width: 100%
                     height: 2px
-                    background: #50A6AA
+                    background: #B2B1B1
                     transition: 0.5s ease
                 a
                     font-weight: 500
                     color: #666666
                     font-size: 24px
+                    @include media(540)
+                        font-size: 16px
+                        a:first-child
+                            margin-left: 100px
                 &.active
                     &::before
                         width: 100%
+                        background: #50A6AA
+
                     a
                         color: #50A6AA
     .tab-nav-content
         padding: 50px 0 0 0
+        @include media(768)
+            padding: 30px 0 0 0
         .tabs
             transform: translateY(20%)
             opacity: 0
@@ -223,22 +274,47 @@
                 display: flex
                 justify-content: center
                 gap: 70px
+                @include media(768)
+                    gap: 20px
+                @include media(540)
+                    flex-direction: column
                 .flex-box-item:first-child
                     border-radius: 15px
                     overflow: hidden
                 .flex-box-item:last-child
                     max-width: 40%
+                    @include media(768)
+                        max-width: 60%
+                    @include media(540)
+                        max-width: 100%
+                        text-align: center
                     h3
                         font-weight: 700
                         font-size: 32px
                         color: #303030
-                        max-width: 334px
+                        max-width: 90%
+                        
+                        @include media(768)
+                            font-size: 25px
+                            max-width: 100%
+                        @include media(540)
+                            max-width: 90%
+                            margin: auto
+
                     p
                         margin: 30px 0
+                        @include media(768)
+                            margin: 10px 0 30px 0
+                        @include media(540)
+                            font-size: 14px
+                            margin: 10px 0 20px 0
+
                     span
                         display: flex
                         gap: 30px
                         align-items: center
+                        @include media(540)
+                            justify-content: center
                         .btn
                             margin: 0
                             a
@@ -260,6 +336,10 @@
         h2
             color: $white
             text-align: center
+            @include media(540)
+                font-size: 25px
+                max-width: 90%
+                margin: auto
     .grid-box
         display: grid
         grid-template-columns: repeat(4,1fr)
@@ -269,6 +349,7 @@
             grid-template-columns: repeat(2,1fr)
         @include media(540)
             grid-template-columns: repeat(1,1fr)
+            padding: 50px 0 20px 0
         .grid-box-item
             border: 1px solid $white
             padding: 20px
@@ -276,21 +357,36 @@
             text-align: center
             height: 237px
             overflow: hidden
+            @include media(540)
+                height: fit-content
             img
                 margin-bottom: 25px
             p
                 color: $white
                 max-width: 70%
                 margin: auto
+                @include media(1024)
+                    max-width: 100%
+                @include media(540)
+                    max-width: 90%
     .btn
         margin: 0
         margin: auto
 
 .home-secC
     padding: 70px 0
+    overflow: hidden
+    @include media(540)
+        padding: 50px 0
     .heading
         h2
             text-align: center
+            @include media(768)
+                max-width: 80%
+                margin: auto
+            @include media(540)
+                font-size: 24px
+                max-width: 100%
     .logo-slider-right,.logo-slider-left
         padding: 50px 0
         .swiper-wrapper
@@ -323,6 +419,8 @@
         height: 50vh
     @include media(540)
         height: 60vh
+    @include media(360)
+        height: 75vh
     &::before
         content: ''
         position: absolute
@@ -330,7 +428,11 @@
         left: 0
         width: 100%
         height: 100%
-        background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%)
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%)
+        @include media(768)
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 52.65) 100%)
+        @include media(540)
+            display: none 
     .bg
         img 
             position: absolute
@@ -340,22 +442,28 @@
             height: 100%
             object-fit: cover
             z-index: -1
+            @include media(540)
+                height: auto
         .container 
             @include media(540)
                 padding: 0
             .bg-wrapper
-                // max-width: 50%
                 position: absolute
                 z-index: 1
-                // width: 100%
                 width: fit-content
                 bottom: 20%
                 margin-left: 10px
                 @include media(991)
                     bottom: 10%
-                @include media(540)
-                    bottom: 10%
+                @include media(768)
+                    bottom: 9%
+                    left: 0
+                    text-align: center
                     margin-left: 0
+                @include media(540)
+                    bottom: 7%
+                    margin-left: 0
+
                 .play-button
                     margin-top: 100px
                     display: flex
@@ -371,78 +479,49 @@
                         font-weight: 600
                 h2
                     font-weight: 700
-                    font-size: 48px
+                    font-size: 38px
                     line-height: 1.1
                     text-align: left
                     margin-bottom: 18px
                     max-width: 720px
-
                     @include media(991)
                         max-width: 70%
                         line-height: 1.2
                         font-size: 40px
+                    @include media(768)
+                        font-size: 30px
+                        margin: auto
+                        text-align: center
                     @include media(540)
                         max-width: 100%
-                        font-size: 35px
+                        font-size: 19px
                         line-height: 1.1
                         text-align: center
-                        padding: 0 20px
+                        padding: 0 0px
                         margin-bottom: 20px
+                        color: black
                 p
                     font-weight: 400
                     font-size: 16px
                     color: $white
                     max-width: 502px
-
-            .bottom
-                display: flex
-                align-items: center
-                gap: 15px
-                width: 100%
-                max-width: 1280px
-                margin: 0 auto
-                justify-content: right
-                position: absolute
-                bottom: 7%
-                .btn:first-child
-                    margin: 0
-                    padding: 0
-                    a
-                        background: $white
-                        display: flex
-                        justify-content: center
-                        align-items: center
-                        border-radius: 50%
-                        padding: 13px 
-                        svg
-                            path
-                                fill: $black
-                        &:hover
-                            svg path
-                                fill:  $white
-                .btn:last-child
-                    padding: 0
-                    margin: 0
-                    a
-                        display: flex
-                        align-items: center
-                        padding: 10px 20px 
-                        background: white
-                        width: fit-content
-                        border-radius: 50px
-                        gap: 10px
+                    @include media(768)
+                        max-width: 502px
+                        margin: 10px auto
+                    @include media(540)
+                        max-width: 95%
+                        font-size: 14px
                         color: black
-                        span
-                            font-weight: 400
-                            font-size: 16px
-                            color: black
-                        &:hover
-                            color: $white
-                    
+                .btn2
+                    @include media(768)
+                        margin: auto
+
 .home-secE
     figure
         height: 100vh
         width: 100%
+        @include media(768)
+            height: auto
         img
             height: 100%
             width: 100%
@@ -451,23 +530,23 @@
 .home-secF
     position: relative
     color: white
-    height: 85vh
-    display: flex
-    flex-direction: column
-    justify-content: center
     z-index: 1
     background: $white
     .wrapper
-        padding: 50px 0
+        padding: 50px 0 0 0
         border-radius: 15px
         background: $white
         text-align: center
-        position: absolute
-        top: -15%
-        width: 100%
-        max-width: 1280px
         margin: 0 auto
-        z-index: 1
+        transform: translateY(-15%)
+        @include media(540)
+            transform: translateY(0%)
+            padding: 40px 0
+        .ico img
+            @include media(540)
+                width: 10px
+                width: 40px
+            
         .heading
             padding: 20px 0
         .form
@@ -475,6 +554,13 @@
             margin: auto
             padding: 50px 0 0 0
             --item: 2
+            @include media(768)
+                max-width: 80%
+            @include media(540)
+                padding: 0 
+                --item: 1
+                --gaptb: 22px
+                max-width: 95%
             .bottom-btn
                 margin: auto
             .dropdown-input
@@ -488,3 +574,5 @@
                         &:hover
                             color: $white
                             background: $primary
+            .btn2
+                margin: 10px auto 0px auto

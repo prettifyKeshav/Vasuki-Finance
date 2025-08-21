@@ -173,16 +173,15 @@ h1,h2,h3,h4,h5,h6
     font-weight: normal
 
 h1
-    font-size: 64px
+    font-size: 48px
     line-height: 1.05        
     font-family: $Brother1816
-
     @include media(1024)
-        font-size: 58px
-    @include media(991)
-        font-size: 54px
-    @include media(767)
         font-size: 48px
+    @include media(991)
+        font-size: 48px
+    @include media(768)
+        font-size: 38px
 h2
     font-size: 54px
     line-height: 1.2
@@ -409,6 +408,8 @@ button
         overflow: hidden
         z-index: 0
         transition: color 0.5s ease
+        @include media(768)
+            padding: 5px 24px
         &::before
             content: ""
             position: absolute
@@ -443,6 +444,8 @@ button
         overflow: hidden
         z-index: 0
         transition: color 0.5s ease
+        @include media(768)
+            padding: 5px 24px
         &::before
             content: ""
             position: absolute
@@ -1477,6 +1480,8 @@ button
         font-size: 36px
         font-weight: 700
         color: #303030
+        @include media(768)
+            font-size: 30px
     p
         font-weight: 400
         font-size: 16px
@@ -1485,4 +1490,9 @@ button
     position: sticky
     top: 20px   
     z-index: 1
-    
+    @include media(540)
+        position: static
+b
+    color: black
+strong
+    color: black

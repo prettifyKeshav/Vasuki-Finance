@@ -268,10 +268,10 @@
   position: absolute;
   left: 0;
   top: 50%;
-  width: 14px;
+  width: 12px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #5393C5;
+  background: var(--gradient-a);
   transform: translateY(-50%);
 }
 

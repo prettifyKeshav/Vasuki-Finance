@@ -12,16 +12,17 @@ header
         top: 0
         left: 0
         right: 0
-        background: var(--black)
+        background: var(--gradient-a)
         height: 0
         box-shadow: 0 2px 5px 2px rgba(99, 99, 99, .2)
         z-index: -1
         transition: 0.7s ease
     &.header-fixed::before, &.header-fill::before
         height: 100%
-
     &.header-fixed .header-wrapper
         padding: 15px 0
+        .colA
+            flex: 0 1 140px
 
     .colA
         flex: 0 1 115px
@@ -35,6 +36,8 @@ header
         // justify-content: space-between
         justify-content: start
         gap: 70px
+        @include media(1024)
+            gap: 40px
         .colA
             flex: 0 1 180px
             transition: 0.7s ease
@@ -42,6 +45,7 @@ header
             display: block
         img
             width: 100%
+            transition: 1s ease
     .ham-btn
         flex: 0 1 auto
         line-height: 0
@@ -101,6 +105,8 @@ header
         gap: 35px
         display: inline-flex
         vertical-align: middle
+        @include media(1024)
+            gap: 24px
         li
             a
                 color: $white
@@ -212,6 +218,7 @@ header
         align-items: center
         gap: 30px
         li:first-child
+     
             a
                 display: flex
                 align-items: center
@@ -334,7 +341,22 @@ footer
         bottom: 0
         line-height: 0
     .bottom-sec
-        padding: 50px 0 100px 
+        padding: 50px 0 
+        @include media(540)
+            padding: 50px 0 30px
+        .footer-desclaimer
+            padding-top: 40px
+            position: relative
+            z-index: 1
+            @include media(768)
+                text-align: justify
+                text-align-last: center
+            p
+                color: white
+                font-size: 14px
+            strong
+                color: white
+                
         .grid-box
             display: grid
             grid-template-columns: 1fr 1.6fr 0.8fr 1.1fr
@@ -344,11 +366,14 @@ footer
             @include media(991)
                 grid-template-columns: repeat(2, 1fr)
                 grid-gap: 40px
-
             @include media(768)
                 grid-template-columns: repeat(1, 1fr)
+                max-width: 70%
+                margin: auto
             @include media(540)
                 gap: 40px
+                max-width: 90%
+
             // @include media(675)
             //     grid-template-columns: repeat(1,1fr)
             //     grid-gap: 40px
@@ -360,15 +385,17 @@ footer
 
             .grid-box-item:nth-child(2)
                 display: flex
-                gap: 90px
+                gap: 60px
+                @include media(1024)
+                    display: flex
+                    justify-content: space-around
+                    gap: 70px
                 @include media(768)
                     display: flex
                     justify-content: space-between
                     gap: 30px
-                    @include media(768)
-                        justify-content: space-between
-                        gap: 0
-
+                @include media(540)
+                    gap: 60px
                 h6
                     font-family: Poppins
                     font-weight: 500
@@ -378,6 +405,7 @@ footer
                     margin-bottom: 20px
                 ul li
                     margin-bottom: 10px 
+                    // line-height: 1
                     a
                         font-family: Poppins
                         font-weight: 400
@@ -442,12 +470,18 @@ footer
                             //     color: $primary
             .grid-box-item:nth-child(4)
                 margin-left: auto
+                @include media(540)
+                    margin: auto
                 .social-icon
                     display: flex
                     align-content: center
                     gap: 30px
+                    @include media(540)
+                        margin-bottom: 10px
                     a
                         margin-left: auto
+                        @include media(540)
+                            margin: auto
                         svg
                             width: 30px
                             height: 30px
@@ -456,6 +490,8 @@ footer
                 .btn
                     margin: 10px 0
                     margin-left: auto
+                    @include media(540)
+                        margin: auto
     .bottom-footer
         border-top: 1px solid #FFFFFF33
         padding: 40px 
@@ -465,14 +501,27 @@ footer
         line-height: 0
         position: relative
         z-index: 1
+        @include media(768)
+            justify-content: center
         @include media(540)
-            padding-bottom: 100px
+            padding-top: 30px 
+            padding-bottom: 90px
+
+            
         .content
             align-items: center
-        p
-            font-weight: 500
-            color: $white
-            font-size: 14px
+            @include media(540)
+                justify-content: center
+            p
+                font-weight: 500
+                color: $white
+                font-size: 14px
+                @include media(540)
+                    line-height: 1.9
+                span
+                    @include media(540)
+                        display: none
+                
         .footer-link
             display: flex
             align-items: center
@@ -495,9 +544,22 @@ footer
     .model-body
         padding: 75px 40px 30px
         height: 100%
-        overflow-y: auto
+        // overflow-y: auto
+        overflow: hidden
         display: flex
         flex-direction: column
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            left: 50%
+            bottom: 0%
+            transform: translate(-30%)
+            width: 100%
+            height: 340px
+            background: url("../../../assets/images/footer-bg.png") no-repeat
+            filter: brightness(0.5)
+            opacity: 0.4
         @include scrollbar(6px,$white,#5e5e5e,8px)
         @include media(520)
             padding: 20px 20px
@@ -570,7 +632,7 @@ footer
                         li
                             padding-left: 10px
                             &:not(:last-child)
-                                margin-bottom: 5px
+                                margin-bottom: 10px
                             a
                                 color: $text
                                 &:hover
@@ -610,7 +672,7 @@ footer
                             transition: none
                             &[stroke],&[fill="none"]
                                 // stroke: currentColor
-                                stroke: #444
+                                fill: #444
                             &[fill]
                                 // fill: currentColor
                         &:hover
@@ -635,7 +697,18 @@ footer
     .model-body
         padding: 60px 35px 30px
         height: 100%
-        overflow-y: auto
+        overflow: hidden
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            bottom: 0
+            right: -100px
+            width: 100%
+            height: 340px
+            background: url("../../../assets/images/footer-bg.png") no-repeat
+            filter: brightness(0.5)
+            opacity: 0.5
         @include scrollbar(3px,$white,#5e5e5e,8px)
         @include media(675)
             padding: 70px 20px 30px
@@ -1295,8 +1368,9 @@ footer
     left: 0
     right: 0
     z-index: 40
-    background: var(--black)
+    background: var(--gradient-a)
     display: none
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset
     @include media(675)
         display: block
     ul
@@ -1324,9 +1398,104 @@ footer
                         fill: $white
                     path
                         &[stroke]
-                            // stroke: $white
+                            stroke: $white
                         &[fill]
-                            // fill: $white
+                            fill: $white
 
+.header-fixed
+    .header-wrapper
+        .colA img
+            filter: brightness(3)
 
+.fixed-bottom
+    position: fixed
+    right: 30px
+    bottom: 50px
+    width: fit-content
+    display: flex
+    align-items: center
+    gap: 15px
+    z-index: 5
+    @include media(675)
+        display: none
+    .btn:first-child
+        margin: 0
+        padding: 0
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
+        a
+            background: $white
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 50%
+            padding: 13px 
+            @include media(768)
+                padding: 9px
+            svg
+                path
+                    fill: $black
+            &:hover
+                svg path
+                    fill:  $white
+    .btn:last-child
+        padding: 0
+        margin: 0
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
+        a
+            display: flex
+            align-items: center
+            padding: 10px 20px 
+            background: white
+            width: fit-content
+            border-radius: 50px
+            gap: 10px
+            color: black
+            @include media(768)
+                padding: 6px 24px
+            span
+                font-weight: 400
+                font-size: 16px
+                color: black
+            &:hover
+                color: $white
+                
+// For Cookie
+.cookie-popup
+    position: fixed
+    bottom: -120px
 
+    /* hidden by default
+    left: 0
+    width: 100%
+    height: 100px
+    background: var(--gradient-a)
+    color: #fff
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 20px
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2)
+    transition: bottom 0.4s ease
+    z-index: 9999
+    &.show
+        bottom: 0
+    p
+        margin: 0
+        font-size: 14px
+        flex: 1
+        padding-right: 20px
+        color: white
+    button
+        background: #fff
+        border: none
+        padding: 3px 16px
+        border-radius: 4px
+        margin-left: 10px
+        cursor: pointer
+        font-weight: 500
+        &.accept
+            color: black
+        &.decline
+            color: black
+        &:hover
+            opacity: 0.9

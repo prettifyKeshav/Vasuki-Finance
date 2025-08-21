@@ -1,0 +1,2473 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.calculator-banner {
+  position: relative;
+  color: white;
+  overflow: hidden;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (max-width: 1024px) {
+  .calculator-banner {
+    height: 70vh;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .calculator-banner {
+    height: 60vh;
+  }
+}
+.calculator-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0) 26.44%, rgba(0, 0, 0, 0.85) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 43.27%, rgba(0, 0, 0, 0.65) 100%);
+}
+.calculator-banner .video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+.calculator-banner .bg-wrapper {
+  position: absolute;
+  bottom: 14%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+@media only screen and (max-width: 540px) {
+  .calculator-banner .bg-wrapper {
+    bottom: 15%;
+  }
+}
+.calculator-banner .bg-wrapper h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 18px;
+  max-width: 38%;
+  margin: auto;
+}
+@media only screen and (max-width: 1024px) {
+  .calculator-banner .bg-wrapper h1 {
+    max-width: 70%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .calculator-banner .bg-wrapper h1 {
+    margin-bottom: 7px;
+    font-size: 30px;
+    line-height: 1.3;
+    max-width: 95%;
+  }
+}
+.calculator-banner .bg-wrapper p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--white);
+}
+@media only screen and (max-width: 540px) {
+  .calculator-banner .bg-wrapper p {
+    font-size: 13px;
+    max-width: 100%;
+    margin: auto;
+  }
+}
+.calculator-banner .scroll-btn {
+  position: absolute;
+  bottom: 12%;
+  left: 49%;
+  animation: scroll 1.5s ease-in-out infinite forwards;
+}
+
+.loan-repayment-cal {
+  padding: 70px 0;
+}
+@media only screen and (max-width: 540px) {
+  .loan-repayment-cal {
+    padding: 50px 0;
+  }
+}
+.loan-repayment-cal #chart_section {
+  width: 500px;
+  height: auto;
+  margin: auto;
+}
+@media only screen and (max-width: 1024px) {
+  .loan-repayment-cal #chart_section {
+    width: 100%;
+  }
+}
+.loan-repayment-cal .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .loan-repayment-cal .flex-box {
+    flex-direction: column;
+  }
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child {
+  background: #F3F3F3;
+  width: 33%;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .loan-repayment-cal .flex-box .flex-box-item:first-child {
+    width: 100%;
+  }
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black);
+  padding-bottom: 40px;
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group:nth-child(6) {
+  display: flex;
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group:nth-child(6) label {
+  width: 40%;
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group:nth-child(6) .right {
+  width: 56%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media only screen and (max-width: 540px) {
+  .loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group:nth-child(6) .right {
+    width: 100%;
+  }
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group:nth-child(6) .right input {
+  width: 33%;
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group:nth-child(6) .right .custom-select {
+  width: 190px;
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group:nth-child(7) {
+  justify-content: end;
+  gap: 10px;
+  padding-top: 20px;
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 540px) {
+  .loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group {
+    flex-direction: column;
+    align-items: unset;
+    gap: 10px;
+  }
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group label {
+  font-weight: 400;
+  color: var(--black);
+  font-size: 14px;
+  line-height: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1024px) {
+  .loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+    width: 55.7%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+    width: 100%;
+  }
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: white;
+  width: 55.7%;
+}
+@media only screen and (max-width: 540px) {
+  .loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select {
+    width: 100%;
+  }
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select::before {
+  right: 25px;
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select span {
+  color: var(--text);
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .calculate-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: var(--gradient-a);
+  color: var(--white);
+}
+.loan-repayment-cal .flex-box .flex-box-item:first-child .input-form .reset-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: #C2FBFE;
+  color: var(--black);
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child {
+  border-radius: 10px;
+  width: 66%;
+  border: 1px solid #D0D0D0;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1024px) {
+  .loan-repayment-cal .flex-box .flex-box-item:last-child {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main h2 {
+  font-weight: 500;
+  color: black;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 20px;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section {
+  padding: 10px;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section .highcharts-credits {
+  display: none;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section .highcharts-axis-title, .loan-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section .highcharts-yaxis {
+  font-weight: 400;
+  font-size: 16px !important;
+  color: var(--text);
+  font-family: "Brother 1816";
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section {
+  width: 300px;
+  height: 100%;
+  border-radius: 10px;
+  background: var(--gradient-a);
+  padding: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .loan-repayment-cal .flex-box .flex-box-item:last-child .results-section {
+    width: 100%;
+  }
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section h2 {
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 0 0 15px 0;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .content {
+  padding: 10px 0 0 5px;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .content .result-item {
+  padding: 10px 0;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .content .result-item h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 0 10px 0;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .content .result-item span {
+  font-weight: 500;
+  color: var(--white);
+  font-size: 24px;
+  line-height: 20px;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .btn {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 30px;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .btn a {
+  width: 100%;
+  text-align: center;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child {
+  border: 1px solid white;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child svg path {
+  transition: 0.5s ease;
+  fill: var(--white);
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover {
+  background: white;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover span {
+  color: var(--primary);
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover svg path {
+  fill: var(--primary);
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child {
+  border: 1px solid white;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child svg path {
+  transition: 0.5s ease;
+  fill: var(--white);
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover {
+  background: white;
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover span {
+  color: var(--primary);
+}
+.loan-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover svg path {
+  fill: var(--primary);
+}
+
+.stamp-duty-cal {
+  padding: 70px 0;
+}
+.stamp-duty-cal .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .stamp-duty-cal .flex-box {
+    flex-direction: column;
+  }
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child {
+  background: #F3F3F3;
+  width: 58%;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 1024px) {
+  .stamp-duty-cal .flex-box .flex-box-item:first-child {
+    width: 100%;
+  }
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav {
+  border-bottom: 1px solid #0BB5BD;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul {
+  padding: 15px 25px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 540px) {
+  .stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul {
+    padding: 15px 5px 13px 5px;
+  }
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul li {
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text);
+  position: relative;
+  transition: 0.3s ease;
+}
+@media only screen and (max-width: 540px) {
+  .stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul li {
+    font-size: 14px;
+  }
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul li::before {
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid #50A6AA;
+  transition: 0.3s ease;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul .active {
+  color: #0BA1A7;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul .active::before {
+  background: #0BB5BD;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form {
+  margin-top: 20px;
+  padding: 20px 20px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black);
+  padding-bottom: 20px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group {
+    gap: 10px;
+    flex-direction: column;
+    align-items: unset;
+  }
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options {
+  display: flex;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options input[type=radio] {
+  display: none;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options input[type=radio]:checked + label {
+  background-color: #0BA1A7;
+  color: #fff;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options label {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #666666;
+  background: white;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media only screen and (max-width: 540px) {
+  .stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .hkgskdg {
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .hkgskdg label {
+    width: 50%;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .klhjgvyr {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .klhjgvyr label {
+    width: 100%;
+  }
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group label {
+  font-weight: 400;
+  color: var(--black);
+  font-size: 14px;
+  line-height: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 36%;
+}
+@media only screen and (max-width: 540px) {
+  .stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group label {
+    width: 100%;
+  }
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group input {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .custom-select {
+  padding: 8px 28px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: white;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .custom-select::before {
+  right: 25px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .custom-select span {
+  color: var(--text);
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .calculate-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: var(--gradient-a);
+  color: var(--white);
+  margin-right: 10px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .reset-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: #C2FBFE;
+  color: var(--black);
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child {
+  border-radius: 10px;
+  width: 40%;
+  border: 1px solid #D0D0D0;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1024px) {
+  .stamp-duty-cal .flex-box .flex-box-item:last-child {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .stamp-duty-cal .flex-box .flex-box-item:last-child {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .gov-grant-gov-fees h2 {
+  font-weight: 500;
+  color: black;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 20px 0px 20px 20px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .gov-grant-gov-fees .result-item1 {
+  margin-left: 20px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .gov-grant-gov-fees .result-item1 .cont {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0901960784);
+  padding: 0 0 40px 0;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .gov-grant-gov-fees .result-item1 h3 {
+  font-weight: 400;
+  color: black;
+  font-size: 14px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  color: #666666;
+  padding-bottom: 10px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .gov-grant-gov-fees .result-item1 span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--text);
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .gov-grant-gov-fees .result-item2 {
+  margin: 20px 0 0 20px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .gov-grant-gov-fees .result-item2 h3 {
+  font-weight: 400;
+  color: black;
+  font-size: 14px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  color: #0BA1A7;
+  padding-bottom: 10px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .gov-grant-gov-fees .result-item2 span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #0BA1A7;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section {
+  width: 300px;
+  height: 100%;
+  border-radius: 10px;
+  background: var(--gradient-a);
+  padding: 30px;
+}
+@media only screen and (max-width: 540px) {
+  .stamp-duty-cal .flex-box .flex-box-item:last-child .results-section {
+    width: 100%;
+  }
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section h2 {
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 0 0 15px 0;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .content {
+  padding: 10px 0 0 5px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .content .result-item {
+  padding: 10px 0;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .content .result-item h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 0 10px 0;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .content .result-item span {
+  font-weight: 500;
+  color: var(--white);
+  font-size: 24px;
+  line-height: 20px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .btn {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 30px;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .btn a {
+  width: 100%;
+  text-align: center;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child {
+  border: 1px solid white;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child svg path {
+  transition: 0.5s ease;
+  fill: var(--white);
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover {
+  background: white;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover span {
+  color: var(--primary);
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover svg path {
+  fill: var(--primary);
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child {
+  border: 1px solid white;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child svg path {
+  transition: 0.5s ease;
+  fill: var(--white);
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover {
+  background: white;
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover span {
+  color: var(--primary);
+}
+.stamp-duty-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover svg path {
+  fill: var(--primary);
+}
+
+.lump-sum-repayment-cal {
+  padding: 70px 0;
+}
+.lump-sum-repayment-cal #chart_section {
+  width: 500px;
+  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  .lump-sum-repayment-cal #chart_section {
+    width: 100%;
+  }
+}
+.lump-sum-repayment-cal .highcharts-series-1 {
+  display: none;
+}
+.lump-sum-repayment-cal .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .lump-sum-repayment-cal .flex-box {
+    flex-direction: column;
+  }
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child {
+  background: #F3F3F3;
+  width: 33%;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .lump-sum-repayment-cal .flex-box .flex-box-item:first-child {
+    width: 100%;
+  }
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black);
+  padding-bottom: 20px;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .second {
+  padding: 20px 0;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group:last-child {
+  justify-content: end;
+  gap: 10px;
+  padding-top: 20px;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 540px) {
+  .lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group {
+    flex-direction: column;
+    align-items: unset;
+    gap: 10px;
+  }
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group label {
+  font-weight: 400;
+  color: var(--black);
+  font-size: 14px;
+  line-height: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1024px) {
+  .lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+    width: 55.7%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+    width: 100%;
+  }
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: white;
+  width: 55.7%;
+}
+@media only screen and (max-width: 540px) {
+  .lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select {
+    width: 100%;
+  }
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select::before {
+  right: 25px;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select span {
+  color: var(--text);
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .calculate-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: var(--gradient-a);
+  color: var(--white);
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:first-child .input-form .reset-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: #C2FBFE;
+  color: var(--black);
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child {
+  border-radius: 10px;
+  width: 66%;
+  border: 1px solid #D0D0D0;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1024px) {
+  .lump-sum-repayment-cal .flex-box .flex-box-item:last-child {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .lump-sum-repayment-cal .flex-box .flex-box-item:last-child {
+    flex-direction: column;
+  }
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main h2 {
+  font-weight: 500;
+  color: black;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 20px;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section {
+  padding: 10px;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section .highcharts-credits {
+  display: none;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section .highcharts-axis-title, .lump-sum-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section .highcharts-yaxis {
+  font-weight: 400;
+  font-size: 16px !important;
+  color: var(--text);
+  font-family: "Brother 1816";
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section {
+  width: 300px;
+  height: 100%;
+  border-radius: 10px;
+  background: var(--gradient-a);
+  padding: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section {
+    width: 100%;
+  }
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section h2 {
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 0 0 15px 0;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .content {
+  padding: 10px 0 0 5px;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .content .result-item {
+  padding: 10px 0;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .content .result-item h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 0 10px 0;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .content .result-item span {
+  font-weight: 500;
+  color: var(--white);
+  font-size: 24px;
+  line-height: 20px;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .btn {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 30px;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .btn a {
+  width: 100%;
+  text-align: center;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child {
+  border: 1px solid white;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child svg path {
+  transition: 0.5s ease;
+  fill: var(--white);
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover {
+  background: white;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover span {
+  color: var(--primary);
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover svg path {
+  fill: var(--primary);
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child {
+  border: 1px solid white;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child svg path {
+  transition: 0.5s ease;
+  fill: var(--white);
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover {
+  background: white;
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover span {
+  color: var(--primary);
+}
+.lump-sum-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover svg path {
+  fill: var(--primary);
+}
+
+.extra-repayment-cal {
+  padding: 70px 0;
+}
+.extra-repayment-cal #chart_section {
+  width: 500px;
+  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  .extra-repayment-cal #chart_section {
+    width: 100%;
+  }
+}
+.extra-repayment-cal .highcharts-series-1 {
+  display: none;
+}
+.extra-repayment-cal .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .extra-repayment-cal .flex-box {
+    flex-direction: column;
+  }
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child {
+  background: #F3F3F3;
+  width: 33%;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .extra-repayment-cal .flex-box .flex-box-item:first-child {
+    width: 100%;
+  }
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child .input-form h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black);
+  padding-bottom: 20px;
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .second {
+  padding: 20px 0;
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group:last-child {
+  justify-content: end;
+  gap: 10px;
+  padding-top: 20px;
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 540px) {
+  .extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group {
+    flex-direction: column;
+    align-items: unset;
+    gap: 10px;
+  }
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group label {
+  font-weight: 400;
+  color: var(--black);
+  font-size: 14px;
+  line-height: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1024px) {
+  .extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+    width: 55.7%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+    width: 100%;
+  }
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: white;
+  width: 55.7%;
+}
+@media only screen and (max-width: 540px) {
+  .extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select {
+    width: 100%;
+  }
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select::before {
+  right: 25px;
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select span {
+  color: var(--text);
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .calculate-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: var(--gradient-a);
+  color: var(--white);
+}
+.extra-repayment-cal .flex-box .flex-box-item:first-child .input-form .reset-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: #C2FBFE;
+  color: var(--black);
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child {
+  border-radius: 10px;
+  width: 66%;
+  border: 1px solid #D0D0D0;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1024px) {
+  .extra-repayment-cal .flex-box .flex-box-item:last-child {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .extra-repayment-cal .flex-box .flex-box-item:last-child {
+    flex-direction: column;
+  }
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main h2 {
+  font-weight: 500;
+  color: black;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 20px;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section {
+  padding: 10px;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section .highcharts-credits {
+  display: none;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section .highcharts-axis-title, .extra-repayment-cal .flex-box .flex-box-item:last-child .chart-section-main #chart_section .highcharts-yaxis {
+  font-weight: 400;
+  font-size: 16px !important;
+  color: var(--text);
+  font-family: "Brother 1816";
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section {
+  width: 300px;
+  height: 100%;
+  border-radius: 10px;
+  background: var(--gradient-a);
+  padding: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .extra-repayment-cal .flex-box .flex-box-item:last-child .results-section {
+    width: 100%;
+  }
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section h2 {
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 0 0 15px 0;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .content {
+  padding: 10px 0 0 5px;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .content .result-item {
+  padding: 10px 0;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .content .result-item h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 0 10px 0;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .content .result-item span {
+  font-weight: 500;
+  color: var(--white);
+  font-size: 24px;
+  line-height: 20px;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .btn {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 30px;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .btn a {
+  width: 100%;
+  text-align: center;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child {
+  border: 1px solid white;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child svg path {
+  transition: 0.5s ease;
+  fill: var(--white);
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover {
+  background: white;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover span {
+  color: var(--primary);
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover svg path {
+  fill: var(--primary);
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child {
+  border: 1px solid white;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child svg path {
+  transition: 0.5s ease;
+  fill: var(--white);
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover {
+  background: white;
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover span {
+  color: var(--primary);
+}
+.extra-repayment-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover svg path {
+  fill: var(--primary);
+}
+
+.home-loan-offset-cal {
+  padding: 70px 0;
+}
+.home-loan-offset-cal #chart_section {
+  width: 500px;
+  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  .home-loan-offset-cal #chart_section {
+    width: 100%;
+  }
+}
+.home-loan-offset-cal .highcharts-series-1 {
+  display: none;
+}
+.home-loan-offset-cal .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .home-loan-offset-cal .flex-box {
+    flex-direction: column;
+  }
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child {
+  background: #F3F3F3;
+  width: 33%;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .home-loan-offset-cal .flex-box .flex-box-item:first-child {
+    width: 100%;
+  }
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black);
+  padding-bottom: 20px;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .second {
+  padding: 20px 0;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .form-group:last-child {
+  justify-content: end;
+  gap: 10px;
+  padding-top: 20px;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 540px) {
+  .home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .form-group {
+    flex-direction: column;
+    align-items: unset;
+    gap: 10px;
+  }
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .form-group label {
+  font-weight: 400;
+  color: var(--black);
+  font-size: 14px;
+  line-height: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1024px) {
+  .home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+    width: 55.7%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .form-group input {
+    width: 100%;
+  }
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: white;
+  width: 55.7%;
+}
+@media only screen and (max-width: 540px) {
+  .home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select {
+    width: 100%;
+  }
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select::before {
+  right: 25px;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .form-group .custom-select span {
+  color: var(--text);
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .calculate-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: var(--gradient-a);
+  color: var(--white);
+}
+.home-loan-offset-cal .flex-box .flex-box-item:first-child .input-form .reset-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: #C2FBFE;
+  color: var(--black);
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child {
+  border-radius: 10px;
+  width: 66%;
+  border: 1px solid #D0D0D0;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1024px) {
+  .home-loan-offset-cal .flex-box .flex-box-item:last-child {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .home-loan-offset-cal .flex-box .flex-box-item:last-child {
+    flex-direction: column;
+  }
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .chart-section-main h2 {
+  font-weight: 500;
+  color: black;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 20px;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section {
+  width: 300px;
+  height: 100%;
+  border-radius: 10px;
+  background: var(--gradient-a);
+  padding: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section {
+    width: 100%;
+  }
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section h2 {
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 0 0 15px 0;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .content {
+  padding: 10px 0 0 5px;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .content .result-item {
+  padding: 10px 0;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .content .result-item h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 0 10px 0;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .content .result-item span {
+  font-weight: 500;
+  color: var(--white);
+  font-size: 24px;
+  line-height: 20px;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .btn {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 30px;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .btn a {
+  width: 100%;
+  text-align: center;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child {
+  border: 1px solid white;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child svg path {
+  transition: 0.5s ease;
+  fill: var(--white);
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover {
+  background: white;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover span {
+  color: var(--primary);
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:first-child:hover svg path {
+  fill: var(--primary);
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child {
+  border: 1px solid white;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.5s ease;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child svg path {
+  transition: 0.5s ease;
+  fill: var(--white);
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover {
+  background: white;
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover span {
+  color: var(--primary);
+}
+.home-loan-offset-cal .flex-box .flex-box-item:last-child .results-section .print-assumption a:last-child:hover svg path {
+  fill: var(--primary);
+}
+
+.borrowing-capacity-cal {
+  padding: 70px 0;
+}
+.borrowing-capacity-cal .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .borrowing-capacity-cal .flex-box {
+    flex-direction: column;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child {
+  background: #F3F3F3;
+  width: 58%;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:first-child {
+    width: 100%;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav {
+  border-bottom: 1px solid #0BB5BD;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul {
+  padding: 15px 25px;
+  list-style-type: none;
+  display: flex;
+  justify-content: start;
+  gap: 60px;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul li {
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text);
+  position: relative;
+  transition: 0.3s ease;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul li::before {
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid #50A6AA;
+  transition: 0.3s ease;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul .active {
+  color: #0BA1A7;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul .active::before {
+  background: #0BB5BD;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form {
+  margin-top: 20px;
+  padding: 20px 20px;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black);
+  padding-bottom: 20px;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group {
+    flex-direction: column;
+    align-items: unset;
+    gap: 10px;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group label {
+  font-weight: 400;
+  color: var(--black);
+  font-size: 14px;
+  line-height: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 36%;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group label {
+    width: 100%;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group input {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options {
+  display: flex;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options {
+    gap: 10px;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options input[type=radio] {
+  display: none;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options input[type=radio]:checked + label {
+  background-color: #0BA1A7;
+  color: #fff;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options label {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #666666;
+  background: white;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options label {
+    width: 50%;
+    margin-right: 0;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .custom-select {
+  padding: 8px 28px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: white;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .custom-select::before {
+  right: 25px;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .custom-select span {
+  color: var(--text);
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .calculate-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: var(--gradient-a);
+  color: var(--white);
+  margin-right: 15px;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .reset-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: #C2FBFE;
+  color: var(--black);
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child {
+  border-radius: 10px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child {
+    width: 100%;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #D0D0D0;
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form h2 {
+  font-weight: 500;
+  color: black;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 20px 0px 20px 20px;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form h2 {
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form h2 {
+    text-align: center;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .one {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 20px;
+  gap: 20px;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .one {
+    justify-content: space-between;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .one .form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .one .form-group label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+  cursor: pointer;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .one .form-group label {
+    white-space: nowrap;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .one .form-group .custom-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #0BA0A6;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .one .form-group .custom-radio:checked {
+  border-color: #0aafb4;
+  transition: 0.3s ease;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .one .form-group .custom-radio:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #0aafb4;
+  border-radius: 50%;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .two {
+  margin: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .two {
+    justify-content: start;
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .two {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .two .form-group {
+  width: 137px;
+  height: 40px;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .two .form-group {
+    width: 100%;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .two .custom-select {
+  padding: 8px 38px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #666666;
+  width: 100%;
+  height: 100%;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .two .custom-select::before {
+  right: 25px;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .two .custom-select span {
+  color: var(--text);
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:first-child form .two input {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid #666666;
+  width: 100%;
+  height: 100%;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: var(--gradient-a);
+  padding: 20px;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .results-section {
+  display: flex;
+  justify-content: space-around;
+  gap: 80px;
+}
+@media only screen and (max-width: 1024px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .results-section {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .results-section {
+    gap: 20px;
+    text-align: center;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .results-section .result-item h3 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: white;
+  margin-bottom: 15px;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .results-section .result-item span {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 20px;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .bottom-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .bottom-btn {
+    flex-direction: column;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .bottom-btn .btn {
+  margin: 30px 0 0 0;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .bottom-btn .btn {
+    width: 100%;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .bottom-btn .btn a {
+  padding: 8px 24px;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .bottom-btn .btn a {
+    width: 100%;
+    text-align: center;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .bottom-btn .custom-btn2 {
+  margin: 30px 0 0 0;
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .bottom-btn .custom-btn2 {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .bottom-btn .custom-btn2 a {
+  border: 1px solid white;
+  line-height: 20px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--white);
+  font-weight: 500;
+}
+.borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .bottom-btn .custom-btn2 a:hover {
+  background: white;
+  color: var(--primary);
+}
+@media only screen and (max-width: 540px) {
+  .borrowing-capacity-cal .flex-box .flex-box-item:last-child .flex-box-item-2:last-child .bottom-btn .custom-btn2 a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.refinance-feasibility-cal {
+  padding: 70px 0;
+}
+@media only screen and (max-width: 540px) {
+  .refinance-feasibility-cal {
+    padding: 50px 0;
+  }
+}
+.refinance-feasibility-cal .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .refinance-feasibility-cal .flex-box {
+    flex-direction: column;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child {
+  background: #F3F3F3;
+  width: 58%;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:first-child {
+    width: 100%;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav {
+  border-bottom: 1px solid #0BB5BD;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul {
+  padding: 15px 25px;
+  list-style-type: none;
+  display: flex;
+  justify-content: start;
+  gap: 60px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul li {
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text);
+  position: relative;
+  transition: 0.3s ease;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul li::before {
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid #50A6AA;
+  transition: 0.3s ease;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul .active {
+  color: #0BA1A7;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-nav ul .active::before {
+  background: #0BB5BD;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form {
+  margin-top: 20px;
+  padding: 20px 20px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black);
+  padding-bottom: 20px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+@media only screen and (max-width: 540px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group {
+    flex-direction: column;
+    align-items: unset;
+    gap: 10px;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options {
+  display: flex;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options input[type=radio] {
+  display: none;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options input[type=radio]:checked + label {
+  background-color: #0BA1A7;
+  color: #fff;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .options label {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #666666;
+  background: white;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media only screen and (max-width: 540px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .twonsbdfg {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .twonsbdfg label {
+    width: 100%;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group label {
+  font-weight: 400;
+  color: var(--black);
+  font-size: 14px;
+  line-height: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 36%;
+}
+@media only screen and (max-width: 540px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group label {
+    width: 100%;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group input {
+  padding: 8px 8px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 540px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group input {
+    width: 100%;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .custom-select {
+  padding: 8px 28px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: white;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .custom-select::before {
+  right: 25px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group .custom-select span {
+  color: var(--text);
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group:last-child {
+  justify-content: start;
+  padding-top: 20px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group:last-child .calculate-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: var(--gradient-a);
+  color: var(--white);
+  margin-right: 15px;
+}
+@media only screen and (max-width: 540px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group:last-child .calculate-btn {
+    margin-right: 0;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .form-group:last-child .reset-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: #C2FBFE;
+  color: var(--black);
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .first-group {
+  display: flex;
+  justify-content: start;
+  gap: 40px;
+  align-items: center;
+}
+@media only screen and (max-width: 540px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .first-group {
+    flex-direction: column;
+    text-align: unset;
+    gap: 0;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .first-group .form-group {
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: start;
+  align-items: flex-start;
+  padding-top: 0;
+}
+@media only screen and (max-width: 540px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .first-group .form-group {
+    width: 100%;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:first-child .form-section .form-tab-content .input-form .first-group .form-group label {
+  font-weight: 400;
+  color: var(--black);
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child {
+  border-radius: 10px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:last-child {
+    width: 100%;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(1) {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #D0D0D0;
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(1) form {
+  padding: 20px 0px 35px 20px;
+}
+@media only screen and (max-width: 540px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(1) form {
+    padding: 30px 0;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(1) form h2 {
+  font-weight: 500;
+  color: black;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5215686275);
+  padding: 0 0 20px 0;
+  text-align: center;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(1) form .one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  gap: 20px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(1) form .one span {
+  color: black;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 20px;
+}
+@media only screen and (max-width: 540px) {
+  .refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(1) form .one span {
+    font-size: 25px;
+  }
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(1) form .one .custom-select {
+  padding: 8px 38px 8px 20px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #666666;
+  width: 100%;
+  height: 100%;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(1) form .one .custom-select::before {
+  right: 25px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(1) form .one .custom-select span {
+  color: var(--text);
+  font-size: 14px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(2) .results-section {
+  display: flex;
+  justify-content: space-around;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(2) .results-section .result-item {
+  text-align: center;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(2) .results-section .result-item span {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 20px;
+  color: black;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(2) .results-section .result-item h3 {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--text);
+  margin: 10px 0;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(2) .bottom-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(2) .bottom-btn .calculate-btn {
+  padding: 20px 10px;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-weight: 500;
+  font-size: 15px;
+  background: var(--gradient-a);
+  color: var(--white);
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(2) .bottom-btn .custom-btn2 {
+  margin: 20px 0 0 0;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(2) .bottom-btn .custom-btn2 a {
+  padding: 4px;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+  border-bottom: 1px solid var(--text);
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(2) .bottom-btn .custom-btn2 a:hover {
+  background: white;
+  color: var(--primary);
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(3) {
+  background: var(--gradient-a);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: inherit;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(3) h3 {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(3) .top {
+  display: flex;
+  justify-content: space-between;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(3) .top .result-item {
+  text-align: right;
+  margin-bottom: 30px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(3) .top .result-item span {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 20px;
+  color: white;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(3) .top .result-item h4 {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: right;
+  color: var(--white);
+  margin-top: 10px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(3) .bottom {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(3) .bottom .result-item {
+  text-align: right;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(3) .bottom .result-item span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+.refinance-feasibility-cal .flex-box .flex-box-item:last-child .flex-box-item-2:nth-child(3) .bottom .result-item h4 {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: right;
+  color: var(--white);
+  margin-top: 10px;
+}
+
+.note {
+  padding-top: 20px;
+}
+.note p {
+  font-size: 15px;
+  font-weight: 500;
+}
+@media only screen and (max-width: 540px) {
+  .note p {
+    font-weight: normal;
+  }
+}
+
+.highcharts-legend {
+  display: none;
+}/*# sourceMappingURL=calculator.css.map */
